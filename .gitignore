@@ -348,6 +348,9 @@ gradle-app.setting
 ### Env ###
 *.local
 
+### LaTeX ###
+/auxil
+
 ### Docker
 
 docker-compose.yml
