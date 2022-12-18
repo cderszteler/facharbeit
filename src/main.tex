@@ -4,7 +4,6 @@
 \author{Christoph Derszteler}
 
 % Packages
-\usepackage{amsmath}
 \usepackage[
   left=4cm,
   right=3cm,
@@ -15,6 +14,17 @@
 \usepackage[T1]{fontenc}
 \usepackage[german]{babel}
 \usepackage{graphicx}
+\usepackage{blindtext}
+
+\usepackage{hyperref}
+\hypersetup{
+  linkcolor=black,
+  linktoc=all,
+}
+
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 % Document
 \begin{document}
