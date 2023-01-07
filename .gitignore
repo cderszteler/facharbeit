@@ -168,6 +168,7 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
+!out/main.pdf
 out/
 
 # mpeltonen/sbt-idea plugin
