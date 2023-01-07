@@ -1,0 +1,48 @@
+Einleitung:
+ - Wieso Thema gewählt?
+   -> Entdeckt durch Schönheit dieser Bilder und fast schon hypnotisierenden Videos, "die ein schier endlos wirkendes Hinabtauchen zeigen"; "intrinsisches interesse"
+     -> Interesse dadurch entstanden, wollte mehr von dieser anmutig, aber irgendwie rätselhaften Bildern erfahren: Hintergrund kennenlernen
+       -> So auf Thema (Mandelbrot-Menge) gestoßen
+ - Einleitung in Mandelbrot-Menge:
+   -> Mandelbrot entdeckte bzw. forschte nach ihr: wann, wieso?
+     -> Was war die Inspiration: Natur (Beispiel: Baum mit unterteilenden Ästen, Inspiration: https://youtu.be/IKG7AW2lmt0?t=73)
+
+Hauptteil:
+  1. Benötigtes Vorwissen
+    1.1 Komplexe Zahlen ("Benötigtes (Vor-)Wissen", "voraussetzungen")
+      =>
+        - Addition + Quadrieren
+        - Complex (plane)
+          - Unterschied zwischen x/y Graph
+            => x/y sind nur reelle Zahlen, zwei unterschiedliche Zahlen bzw. Variablen also. Z.B. x (1. Variable) die in f(x) eingesetzt wird (und somit y als 2. Variable)
+            => c hingegen ist komplex, es handelt sich also um eine Zahl, die jedoch in zwei Teile aufgebrochen werden kann
+              -> a + bi (1. Teil: a, 2. Teil: b)
+    1.2 *Iteration*, was bedeutet das? | Mandelbrot-Menge interessiert daran, wie diese Iterationen verlaufen (explodieren/"verlaufen gegen Unendlich", bleiben beschränkt/"(verlaufen gegen Null", etc.)
+      => Tabelle von:
+        - fc(z) = z^2 + c, bei c = 1 <== Explodiert
+        - fc(z) = z^2 + c, c = -1 <== Explodiert
+      -> Wurde herausgefunden, dass jede komplexe Nummer außerhalb von Radius 2 immer explodiert
+  2. Mandelbrot-Menge
+    2.1 Vorzeigen der Definition der Mandelbrot-Menge "M = ..."
+      - Konkret für Mandelbrot |s.o.|: (1) Explodiert (gegen Unendlich) (2) Bleibt im Bereich <= 2
+        -> Lediglich 2. Fall interessant, genauer: Wie viele Iterationen notwendig
+    2.2 Visuelle/Grafische Darstellung einer Mandelbrot-Menge analysieren | Überleitung durch: "Wie sieht sowas aus, etc."
+      => "Gefärbter"/"Sichtbarer" Teil der Mandelbrot-Menge beschäftigt sich mit (2) Fall
+      => Farbe gibt an, wie viele Iterationen notwendig sind, um herauszufinden, dass die Zahl explodiert
+            -> schwarz bedeutet: keine explosion (z.b. nicht nach 200 iterationen)
+
+  3. Praktische Betrachtung
+    - Visuelle Generierung | Überleitung von theoretischer Bildbetrachtung, nun zur Generierung solcher Bilder
+      -> Funktionsweise des Programms/Skripts: Was bedeuten die einzelnen Instruktionen
+        -> Woher kommen die Farben? "Farbkodierung"
+      -> Wie können "Zooms" generiert werden? | Überleitung aus meiner Einleitung (was mich fasziniert hat)
+    - Wo kommt in der Natur / im echten Leben **noch** vor? | **noch** als Überleitung
+      + In Animationen, z.B. Lavatropfen (Inspiration: https://youtu.be/IKG7AW2lmt0?t=331)
+
+Schluss:
+  - Zusammenfassen
+  - Neue Themenfelder und weitere Ideen/Zusammenhänge "erwähnen"/"aufbringen":
+    -> Julia-Set
+      => Fängt nicht immer mit einem Startwert für z0 von 0 an
+    -> Mandelbrot-Menge und PI & Mandelbrot-Menge und Fibonacci-Folge
+      => {YT Videos}
