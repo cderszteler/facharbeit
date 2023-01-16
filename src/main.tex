@@ -1,3 +1,4 @@
+%! suppress = NonBreakingSpace
 %! BibTeX Compiler = biber
 
 % Preamble
@@ -28,7 +29,7 @@
   citestyle=alphabetic,
   bibstyle=alphabetic,
 ]{biblatex}
-~\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+\DeclareCiteCommand{\footcite}[\mkbibfootnote]
 {\usebibmacro{prenote}}
 {\usebibmacro{citeindex}%
 \printtext[brackets]{\usebibmacro{cite}}}
