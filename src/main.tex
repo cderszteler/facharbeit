@@ -17,16 +17,25 @@
 \usepackage[german]{babel}
 \usepackage{graphicx}
 \usepackage{blindtext}
+
 \usepackage{hyperref}
 \hypersetup{
   linkcolor=black,
   linktoc=all,
 }
+
 \usepackage[
   citestyle=alphabetic,
   bibstyle=alphabetic,
 ]{biblatex}
+~\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+\printtext[brackets]{\usebibmacro{cite}}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
 \addbibresource{sources.bib}
+
 \usepackage{tocloft}
 \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -39,9 +48,7 @@
   \tableofcontents
   \newpage
 
-  \section{Einleitung}\label{sec:introduction}
-  \newpage
-
+  \include{sections/introduction}
   \include{sections/complexNumberts}
 
   \section{Fazit}\label{sec:conclusion}
