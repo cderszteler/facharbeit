@@ -1,3 +1,5 @@
+%! BibTeX Compiler = biber
+
 % Preamble
 \documentclass[12pt]{article}
 \renewcommand{\baselinestretch}{1.5}
@@ -15,13 +17,16 @@
 \usepackage[german]{babel}
 \usepackage{graphicx}
 \usepackage{blindtext}
-
 \usepackage{hyperref}
 \hypersetup{
   linkcolor=black,
   linktoc=all,
 }
-
+\usepackage[
+  citestyle=alphabetic,
+  bibstyle=alphabetic,
+]{biblatex}
+\addbibresource{sources.bib}
 \usepackage{tocloft}
 \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -43,6 +48,7 @@
   \newpage
 
   \section{Literatur und Quellen}\label{sec:literature-and-sources}
+  \printbibliography[heading=none]
   \newpage
 
   \section{Selbstständigkeitserklärung}\label{sec:declration-of-independence}
