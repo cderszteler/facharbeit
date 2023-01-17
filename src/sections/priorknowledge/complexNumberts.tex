@@ -12,14 +12,12 @@ ist definiert durch die Gleichung \(i^2 = -1\).
 
 Viele Rechenoperationen mit komplexen Zahlen funktionieren anders, als man sie
 von den reellen oder natürlichen Zahlen gewohnt ist.
-Die Addition ist jedoch im Vergleich zu anderen Operationen wie der Division
-noch recht simpel.
 Zur Addition zwei komplexer Zahlen addiert man den
 \begingroup\color{red}Realteil\endgroup~und den
 \begingroup\color{blue}Imagin\"arteil\endgroup
-~getrennt voneinander und fügt diesen danach wieder zusammen:
-\((a_1 + {b_1}i) + (a_2 + {b_2}i) = a_1 + a_2 + (b_1 + b_2)i\)
-~\cite{lichtenegger_komplexe_2002}.
+~getrennt voneinander und fügt diesen danach wieder zusammen
+~\cite{lichtenegger_komplexe_2002}:
+\((a_1 + {b_1}i) + (a_2 + {b_2}i) = a_1 + a_2 + (b_1 + b_2)i\).
 Ein illustriertes Beispiel, gegeben sei \(z_1 = -3 + 6i\) und \(z_2 = 2 + 0.5i\):
 
 \begin{equation}\label{eq:complex-numbers-addition-example}
@@ -28,4 +26,55 @@ Ein illustriertes Beispiel, gegeben sei \(z_1 = -3 + 6i\) und \(z_2 = 2 + 0.5i\)
     + (\begingroup\color{red} 2\endgroup + \begingroup\color{blue} 0.5i\endgroup)
   = \begingroup\color{red} (-3 + 2)\endgroup + \begingroup\color{blue} (6 + 0.5)\endgroup i
   = -1 + 6.5i
+\end{equation}
+
+\subsubsection{Multiplikation von komplexen Zahlen}\label{subsubsec:multiplication-of-complex-numbers}
+
+Die Multiplikation funktioniert ebenfalls nicht so, wie man sie von den
+reellen Zahlen gewohnt ist.
+Um komplexe Zahlen zu multiplizieren, bedient man sich stattdessen dem Distributivgesetz,
+indem man den zweiten Faktor erneut in seinen
+\begingroup\color{red}Realteil\endgroup~und seinen
+\begingroup\color{blue}Imagin\"arteil\endgroup
+~trennt und diese jeweils einzeln mit dem ersten Faktor multipliziert
+~\cite{lichtenegger_komplexe_2002}.
+Die zwei entstehenden Produkte lassen sich dann wie oben beschrieben addieren.
+Bei der Multiplikation mit dem Imagin\"arteil multipliziert man unter anderem
+zwei imagin\"are Elemente miteinander.
+Da \(i^2 = -1\) gilt, entsteht durch diese Multiplikation
+ein negatives, aber reales Produkt.
+Dadurch gilt:
+
+\begin{equation}\label{eq:complex-numbers-multiplication}
+  \begin{split}
+    (a + bi)(c + di) \\
+    = \begingroup\color{red} c\endgroup (a + bi)
+      + \begingroup\color{blue} di\endgroup (a + bi) \\
+    = \begingroup\color{red} ac\endgroup
+      + \begingroup\color{blue} bci\endgroup
+      + \begingroup\color{blue} adi\endgroup
+      + \begingroup\color{red} bdi^2\endgroup \\
+    = \begingroup\color{red} ac\endgroup
+      + \begingroup\color{blue} bci\endgroup
+      + \begingroup\color{blue} adi\endgroup
+      \textbf{ - } \begingroup\color{red} bdi\endgroup \\
+    = \begingroup\color{red} ac - bd\endgroup
+      + \begingroup\color{blue}(bc + ad)i\endgroup \\
+  \end{split}
+\end{equation}
+
+Ein weiteres illustriertes Beispiel, gegeben sei erneut
+\(z_1 = -3 + 6i\) und \(z_2 = 2 + 0.5i\):
+
+\begin{equation}\label{eq:complex-numbers-multiplication-example}
+  \begin{split}
+    z_1 \cdot z_2 \\
+    = (\begingroup\color{red} -3\endgroup + \begingroup\color{blue} 6i\endgroup)
+      \cdot (\begingroup\color{red} 2\endgroup + \begingroup\color{blue} 0.5i\endgroup) \\
+    = \begingroup\color{red} (-3 \cdot 2 - 6 \cdot 0.5)\endgroup
+      + \begingroup\color{blue} (6 \cdot 2 + (-3) \cdot 0.5)\endgroup i \\
+    = \begingroup\color{red} (-6 - 3)\endgroup
+      + \begingroup\color{blue} (12 - 1.5)\endgroup i \\
+    = \begingroup\color{red} -9\endgroup + \begingroup\color{blue} 10.5i\endgroup
+  \end{split}
 \end{equation}
