@@ -50,9 +50,10 @@
 \newcommand{\newsection}[2]{\renewcommand{\sectiontitle}{#1}\section{#1}\label{sec:#2}}
 
 \usepackage{fancyhdr}
-\fancypagestyle{fancyplain}{
+\fancypagestyle{table-of-contents}{
   \fancyhead{}
   \rhead{\thepage}
+  \chead{INHALTSVERZEICHNIS}
   \fancyfoot{}
   \renewcommand{\headrulewidth}{0.4pt}
 }
@@ -68,7 +69,7 @@
   \input{titlepage}
   \newpage
 
-  \tableofcontents{\thispagestyle{fancyplain}}
+  \tableofcontents{\thispagestyle{table-of-contents}}
 
   \include{sections/introduction}
 
