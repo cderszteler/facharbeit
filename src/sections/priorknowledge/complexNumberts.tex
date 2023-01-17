@@ -63,7 +63,7 @@ Dadurch gilt:
   \end{split}
 \end{equation}
 
-Ein weiteres illustriertes Beispiel, gegeben sei erneut
+Ein weiteres, illustriertes Beispiel, gegeben sei erneut
 \(z_1 = -3 + 6i\) und \(z_2 = 2 + 0.5i\):
 
 \begin{equation}\label{eq:complex-numbers-multiplication-example}
@@ -78,3 +78,16 @@ Ein weiteres illustriertes Beispiel, gegeben sei erneut
     = \begingroup\color{red} -9\endgroup + \begingroup\color{blue} 10.5i\endgroup
   \end{split}
 \end{equation}
+
+Das für die Mandelbrot-Menge besonders wichtige Quadrieren von komplexen Zahlen
+lässt sich mit der kartesischen Form ebenfalls herleiten.
+Für eine gegeben, zu quadrierende, komplexe Zahl \(z_1\) gilt:
+
+\begin{multline}\label{eq:complex-numbes-squaring}
+  z_1^2
+    = z_1 + z_1
+    = (a + bi) \cdot (a + bi)
+    = a \cdot (a + bi) + bi \cdot (a + bi) \\
+    = a^2 + abi + abi - b^2
+    = a^2 - b^2 + 2abi
+\end{multline}
