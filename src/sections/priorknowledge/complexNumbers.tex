@@ -57,3 +57,43 @@ Ein illustriertes Beispiel soll beide Rechenoperationen veranschaulichen:
     = \begingroup\color{red} -20\endgroup + \begingroup\color{blue} (-40i)\endgroup
   \end{split}
 \end{equation}
+
+\subsubsection{Graphische Darstellung komplexer Zahlen}
+
+Komplexe Zahlen können wie auch Zahlen anderer Zahlenmengen grafisch
+dargestellt werden.
+Da komplexe Zahlen jedoch sowohl aus einem Realteil und einem Imagin\"arteil
+bestehen, reicht eine Gerade nicht aus, um diese darzustellen, stattdessen
+braucht man eine \textbf{Ebene}\footnote{
+  Ebenfalls unter komplexer Zahlenebene und gaußscher Zahlenebene zu finden.
+}.
+Diese komplexe Zahlenebene teilt den Realteil auf der waagerechten Achse und
+den Imagin\"arteil auf die horizontale Achse auf.
+Eine komplexe Zahl \(z_1 = a + bi\) besitzt somit die Koordinaten \( P(a|b)\).
+
+
+\begin{figure}[H]\label{fig:complex-numbers-figure-example}
+  \begin{center}
+    \scalebox{.5}{
+      \begin{tikzpicture}
+        \begin{scope}[thick,font=\scriptsize]
+          \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
+          \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+
+          \foreach \n in {-3,...,-1,1,2,...,3}{
+            \draw (\n, 3pt) -- (\n, -3pt)   node [below] {\(\n\)};
+            \draw (3pt,\n) -- (-3pt,\n)   node [left] {\(\n i\)};
+          }
+
+          \draw [color=black, fill=black] (0,0) circle(0.05);
+          \draw [color=black, fill=black] (2,3) circle(0.05);
+          \draw [color=black, fill=black] (-3, -2) circle(0.05);
+          \node [color=black] at (0.75,0.25) {\( P_1(0 + 0i)\)};
+          \node [color=black] at (2.75,3.25) {\( P_2(2 + 3i)\)};
+          \node [color=black] at (-2.25,-1.75) {\( P_3(-3 - 2i)\)};
+        \end{scope}
+      \end{tikzpicture}
+    }
+    \caption{Komplexe Ebene mit den Punkten \( P_1, P_2 \text{ und } P_3\)}
+  \end{center}
+\end{figure}

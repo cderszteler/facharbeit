@@ -13,11 +13,12 @@
   top=3cm,
   bottom=3cm
 ]{geometry}
+\usepackage[bottom]{footmisc}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[german]{babel}
-\usepackage{graphicx}
 \usepackage{blindtext}
+\usepackage{float}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -37,13 +38,14 @@
 {\usebibmacro{postnote}}
 \addbibresource{sources.bib}
 
+\usepackage{graphicx}
+\usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{xcolor}
+\usepackage{tikz}
 \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
-
-\usepackage{booktabs}
 
 \usepackage{tocloft}
 \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
