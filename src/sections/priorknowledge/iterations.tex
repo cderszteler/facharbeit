@@ -1,0 +1,38 @@
+\subsection{Iterationen}\label{subsec:iterations}
+
+Iterationen beziehen sich in der Mathematik auf das Wiederholen einer bestimmten
+Prozedur beziehungsweise in diesem Fall einer Berechnung.
+Bei Funktionsiterationen iteriert (also wiederholt) man die Berechnung eines
+Funktionswerts mit dem Funktionsargument des vorherigen Funktionswerts:
+\(z_1 = f(z_0),\, z_2 = f(z_1),\, z_3 = f(z_2),\, \cdots,\, z_n = f(z_{n-1})\)
+
+Eine wichtige Eigenschaft von
+Iterationen ist das Verhalten für \(z \to \infty\) .
+Dabei wird unterschieden, ob die Iteration gegen Unendlich verläuft
+(\glqq explodiert\grqq ) oder sich einem bestimmten Punkt, oftmals Null, ann\"ahert.
+Letzteres bezeichnet man als einen beschränkten Verlauf.
+
+Dieser Verlauf ist bei Iterationen, die ihre Ausgangswerte als neue Eingangswerte
+benutzen, schwer vorauszusagen.
+Dabei k\"onnen \"ahnlich Funktionen bereits sehr unterschiedliche Verhalten aufweisen.
+Die Funktionen \(f(z) = z^2 + c \text{ mit }\ z_0 = 0\) stellt beispielhaft
+die unterschiedlichen Verlaufstypen für \(c_1 = 1 \text{ und }\ c_2 = -1\) dar:
+
+\begin{table}[h!]\label{tab:iterations-example}
+  \centering
+  \begin{tabular}{@{}ccc@{}}
+    \toprule
+    & \multicolumn{2}{c}{Parameter für \(f(z)\)} \\
+    \cmidrule(lr){2-3}
+    Iteration & \( c_1 = 1\) & \( c_2 = -1\) \\
+    \midrule
+    1. & 1 & -1 \\
+    2. & 2 & 0 \\
+    3. & 5 & -1 \\
+    4. & 26 & 0 \\
+    5. & 667 & -1 \\
+    6. & \(\approx \num{1,9e11}\ \) & 0 \\
+    7. & \(\approx \num{3,9e22}\ \) & -1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
