@@ -358,3 +358,7 @@ gradle-app.setting
 
 docker-compose.yml
 /letsencrypt/acme.json
+
+### Additional ###
+
+todo.txt
