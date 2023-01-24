@@ -46,8 +46,11 @@
 \usepackage{amssymb}
 \usepackage{xcolor}
 \usepackage{tikz}
+
 \counterwithin*{equation}{section}
+\counterwithin*{figure}{section}
 \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
 
 \usepackage{tocloft}
 \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
