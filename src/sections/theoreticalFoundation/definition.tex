@@ -3,15 +3,32 @@
 Die Mandelbrot-Menge befasst sich mit der bereits im vorherigen Kapitel vorgestellen,
 komplexen Iteration \(z_{n+1} = z_n^2 + c \text{ mit } z_0 = 0\) und einem variablen
 Wert für \(c\)~\cite*[S.25]{schuh_fraktale_2017}.
-Die Mandelbrot-Menge enthält dabei alle Werte dieser Iteration, die beschränkt sind.
+Die Mandelbrot-Menge enthält dabei alle komplexen Werte für $c$, mit denen die
+oben angegebene Iteration beschränkt ist.
 Mathematisch lässt sich die Menge iterativ wie folgt definiert:
 
-\[
+\begin{equation}\label{eq:mathematical-definition}
   \mathbb{M} = \{c \in \mathbb{C} \; |\;  \forall n \in \mathbb{N}:\; |f_c^n(z)|\; \leqslant 2;\, n \to \infty\}
   \quad
   \text{mit}
   \quad
   f_c(z) = z^2 + c;\, z,c \in \mathbb{C}
-\]
+\end{equation}
 
-% TODO: Explain iteration (e.g. why <= 2)
+Wie in der Definition zu sehen, wird der Funktionswert der
+gegen Unendlich strebenden $n$-ten Iteration absolut betrachtet, da die
+Funktion symmetrisch zur reellen Achse ist.
+
+Ebenfalls zu betrachten ist die Einschränkung auf Funktionswerte $\leqslant 2$.
+Dies hängt mit einem Kreis, dessen Mittelpunkt im Ursprung liegt und dessen
+Radius 2 beträgt, zusammen. % TODO: Add [Vgl. A.4] picture
+Für alle Funktionswerte, die sich in einer Iteration ergeben und außerhalb dieses Radius
+beziehungsweise dem Kreis liegen, lässt das jeweilige $c$ aus der Mandelbrot-Menge
+ausschließen~\cite{munafo_escape_1997}.
+Obwohl der gesamte Beweis dessen den Rahmen dieser Arbeit sprengen würde,
+so soll dennoch angemerkt werden, dass mithilfe der Dreiecksungleichung und
+vollständiger Induktion unter der Vorausnahme von $|z_n| > 2 \text{ und } |z_n| > |c|$
+folgende Ungleichung, die eine divergente Entwicklung repräsentiert,
+$\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann, wobei zusätzlich gezeigt
+werden kann, dass für alle Werte von $|c| > 2$ nach spätestens 2 Iterationen gilt:
+$z_{n=2} = |c^2 + c| \geqslant |c|^2 - |c| > 2$.
