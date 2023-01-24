@@ -1,16 +1,8 @@
 \newsection{Theoretische Grundlage}{theoretical-foundation}
 
-Die von Benoît Mandelbrot \hyperref[app:4]{[A.4]} entdeckte und nach ihm benannte
-Mandelbrot-Menge befasst sich mit der bereits im vorherigen Kapitel vorgestellen,
-komplexen Iteration \(z_{n+1} = z_n^2 + c \text{ mit } z_0 = 0\) und einem variablen
-Wert für \(c\)~\cite*[S.25]{schuh_fraktale_2017}.
-Die Mandelbrot-Menge enthält dabei alle Werte dieser Iteration, die beschränkt sind.
-Mathematisch wird die Menge wie folgt definiert:
+Nachdem im vorherigen Kapitel die Grundlagen für die Mandelbrot-Menge
+erklärt wurden, befasst sich diese Kapitel nun mit der rein mathematischen Betrachtung
+dieser Menge, indem diese zunächst fachlich korrekt definiert und
+im Anschluss grafisch analysiert wird.
 
-\[
-  \mathbb{M} = \{c \in \mathbb{C} \; |\;  \forall n \in \mathbb{N}:\; |f_c^n(z)|\; \leqslant 2;\, n \to \infty\}
-  \quad
-  \text{mit}
-  \quad
-  f_c(z) = z^2 + c;\, z,c \in \mathbb{C}
-\]
+\input{sections/theoreticalFoundation/definition}

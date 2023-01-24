@@ -1,0 +1,17 @@
+\subsection{Mathematische Definition}\label{subsec:mathematical-definition}
+
+Die Mandelbrot-Menge befasst sich mit der bereits im vorherigen Kapitel vorgestellen,
+komplexen Iteration \(z_{n+1} = z_n^2 + c \text{ mit } z_0 = 0\) und einem variablen
+Wert für \(c\)~\cite*[S.25]{schuh_fraktale_2017}.
+Die Mandelbrot-Menge enthält dabei alle Werte dieser Iteration, die beschränkt sind.
+Mathematisch lässt sich die Menge iterativ wie folgt definiert:
+
+\[
+  \mathbb{M} = \{c \in \mathbb{C} \; |\;  \forall n \in \mathbb{N}:\; |f_c^n(z)|\; \leqslant 2;\, n \to \infty\}
+  \quad
+  \text{mit}
+  \quad
+  f_c(z) = z^2 + c;\, z,c \in \mathbb{C}
+\]
+
+% TODO: Explain iteration (e.g. why <= 2)
