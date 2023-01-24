@@ -16,13 +16,13 @@ von den reellen oder natürlichen Zahlen gewohnt ist.
 
 Zur Addition zwei komplexer Zahlen addiert man den
 Realteil und den Imagin\"arteil getrennt voneinander und fügt diesen
-danach wieder zusammen~\cite{lichtenegger_komplexe_2002}:
+danach wieder zusammen~\cite[S. 2]{lichtenegger_komplexe_2002}:
 \((a_1 + {b_1}i) + (a_2 + {b_2}i) = a_1 + a_2 + (b_1 + b_2)i\).
 
 Um komplexe Zahlen zu multiplizieren, wendet man das Distributivgesetz an,
 indem man den zweiten Faktor ebenfalls in seinen Realteil und seinen
 Imagin\"arteil trennt und diese jeweils einzeln mit dem ersten Faktor multipliziert
-~\cite{lichtenegger_komplexe_2002}.
+~\cite[S. 2f.]{lichtenegger_komplexe_2002}.
 Die zwei entstehenden Produkte lassen sich dann wie oben beschrieben addieren.
 Bei der Multiplikation mit dem Imagin\"arteil multipliziert man unter anderem
 zwei imagin\"are Elemente miteinander.
@@ -72,31 +72,49 @@ den Imagin\"arteil auf die horizontale Achse auf.
 Eine komplexe Zahl \(z_1 = a + bi\) besitzt somit die Koordinaten \( P(a|b)\).
 
 
+Eine komplexe Zahl lässt sich wie auch eine reelle Zahl absolut betrachten, wobei
+dieser absolute Wert ebenfalls als einen Abstand zum Ursprung zu betrachten ist
+~\cite[S. 3]{lichtenegger_komplexe_2002}.
+Aufgrund dessen, dass eine komplexe Zahl aus zwei Komponenten besteht, lässt sich
+der Abstand über den Satz des Pythagoras berechnen:
+
+\begin{equation}\label{eq:absolute-complex-number}
+  |z|^2 = x^2 + y^2
+  \quad
+  \text{ beziehungsweise }
+  \quad
+  z = \sqrt{x^2 + y^2}
+\end{equation}
+
 \begin{figure}[H]\label{fig:complex-numbers-figure-example}
   \begin{center}
-    \scalebox{.5}{
-      \begin{tikzpicture}
-        \begin{scope}[thick,font=\scriptsize]
-          \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
-          \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+    \begin{tikzpicture}
+      \begin{scope}[thick,font=\scriptsize]
+        \draw (0,0) -- (0,2);
+        \draw (2,0) -- (2,3);
+        \draw (0,0) -- (2,3);
+        \fill[fill=gray!15] (0,0)--(2, 0)--(2,3);
+        \node at (1,0.25) {\( x \)};
+        \node at (2.25,1.5) {\( y \)};
+        \node at (0.70,1.5) {\( |z| \)};
 
-          \foreach \n in {-3,...,-1,1,2,...,3}{
-            \draw (\n, 3pt) -- (\n, -3pt)   node [below] {\(\n\)};
-            \draw (3pt,\n) -- (-3pt,\n)   node [left] {\(\n i\)};
-          }
+        \draw [fill=black] (2,3) circle(0.05);
+        \draw [fill=black] (-3.4, -1.75) circle(0.05);
+        \node at (2.75,3.25) {\( P_1(2|3i)\)};
+        \node at (-2,-1.50) {\( P_2(-3.4|-1.75i)\)};
 
-          \draw [color=black, fill=black] (0,0) circle(0.05);
-          \draw [color=black, fill=black] (2,3) circle(0.05);
-          \draw [color=black, fill=black] (-3, -2) circle(0.05);
-          \node [color=black] at (0.75,0.25) {\( P_1(0|0i)\)};
-          \node [color=black] at (2.75,3.25) {\( P_2(2|3i)\)};
-          \node [color=black] at (-2.25,-1.75) {\( P_3(-3|2i)\)};
-        \end{scope}
-      \end{tikzpicture}
-    }
+        \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
+        \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+
+        \foreach \n in {-3,...,-1,1,2,...,3}{
+          \draw (\n, 3pt) -- (\n, -3pt)   node [below] {\(\n\)};
+          \draw (3pt,\n) -- (-3pt,\n)   node [left] {\(\n i\)};
+        }
+      \end{scope}
+    \end{tikzpicture}
     \caption{
-      Komplexe Ebene mit den Punkten \( P_1, P_2 \text{ und } P_3\)
-      \hyperref[app:3]{[A.3]}
+      Komplexe Ebene mit den Punkten \( P_1, \text{ und } P_2\)
+      und dem absoluten Wert \(|z| \text{ vom Punkt } P_1\)
     }
   \end{center}
 \end{figure}

@@ -24,30 +24,6 @@
 \end{equation}
 
 \noindent\textbf{A.3:}\label{app:3}
-\begin{figure}[H]\label{fig:complex-numbers-figure-example-big}
-\begin{center}
-  \begin{tikzpicture}
-    \begin{scope}[thick,font=\scriptsize]
-      \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
-      \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
-
-      \foreach \n in {-3,...,-1,1,2,...,3}{
-        \draw (\n, 3pt) -- (\n, -3pt)   node [below] {\(\n\)};
-        \draw (3pt,\n) -- (-3pt,\n)   node [left] {\(\n i\)};
-      }
-
-      \draw [color=black, fill=black] (0,0) circle(0.05);
-      \draw [color=black, fill=black] (2,3) circle(0.05);
-      \draw [color=black, fill=black] (-3, -2) circle(0.05);
-      \node [color=black] at (0.75,0.25) {\( P_1(0|0i)\)};
-      \node [color=black] at (2.75,3.25) {\( P_2(2|3i)\)};
-      \node [color=black] at (-2.25,-1.75) {\( P_3(-3|2i)\)};
-    \end{scope}
-  \end{tikzpicture}
-\end{center}
-\end{figure}
-
-\noindent\textbf{A.4:}\label{app:4}
 \begin{figure}[H]\label{fig:benoit-mandelbrot-picture}
 \begin{center}
   \includegraphics[width=\textwidth]{images/benoit-mandelbrot}
