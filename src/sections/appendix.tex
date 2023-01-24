@@ -26,7 +26,35 @@
 \noindent\textbf{A.3:}\label{app:3}
 \begin{figure}[H]\label{fig:benoit-mandelbrot-picture}
 \begin{center}
-  \includegraphics[width=\textwidth]{images/benoit-mandelbrot}
+  \includegraphics[width=0.8\textwidth]{images/benoit-mandelbrot}
   \caption{Benoît Mandelbrot 1997 in Frankreich~\cite{gaillarde_benoit_1997}}
+\end{center}
+\end{figure}
+
+\noindent\textbf{A.4:}\label{app:4}
+\begin{figure}[H]\label{fig:escape-radius}
+\begin{center}
+  \begin{tikzpicture}
+    \begin{scope}[thick,font=\scriptsize]
+      \fill[draw=black, fill=white] (0,0) circle (2);
+
+      \draw [fill=black] (1,1.6) circle(0.05);
+      \draw [fill=black] (-3,2.75) circle(0.05);
+      \node at (1.75,1.85) {\( P_1(1|1.6i)\)};
+      \node at (-1.75,3) {\( P_2(-3|2.75i)\)};
+
+      \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
+      \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+
+      \foreach \n in {-3,...,-1,1,2,...,3}{
+        \draw (\n, 3pt) -- (\n, -3pt)   node [below] {\(\n\)};
+        \draw (3pt,\n) -- (-3pt,\n)   node [left] {\(\n i\)};
+      }
+    \end{scope}
+  \end{tikzpicture}
+  \caption{
+    Einheitskreis mit dem Radius 2. Zu sehen ist der Punkt \(P_1\), der im
+    Einheitskreis liegt und Punkt \(P_2\), der aushalb des Einheitskreises liegt.
+  }
 \end{center}
 \end{figure}
