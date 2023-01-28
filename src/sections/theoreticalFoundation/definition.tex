@@ -1,11 +1,11 @@
 \subsection{Mathematische Definition}\label{subsec:mathematical-definition}
 
-Die Mandelbrot-Menge befasst sich mit der bereits im vorherigen Kapitel vorgestellen,
+Die Mandelbrot-Menge wird durch die bereits im vorherigen Kapitel vorgestellen,
 komplexen Iteration \(z_{n+1} = z_n^2 + c \text{ mit } z_0 = 0\) und einem variablen
-Wert für \(c\)~\cite*[S.25]{schuh_fraktale_2017}.
-Die Mandelbrot-Menge enthält dabei alle komplexen Werte für $c$, mit denen die
+Wert für \(c\)~\cite*[S.25]{schuh_fraktale_2017} berechnet.
+Dabei enthält die Menge alle komplexen Werte für $c$, mit denen die
 oben angegebene Iteration beschränkt ist.
-Mathematisch lässt sich die Menge iterativ wie folgt definiert:
+Mathematisch ist Menge iterativ wie folgt definiert:
 
 \begin{equation}\label{eq:mathematical-definition}
   \mathbb{M} = \{c \in \mathbb{C} \; |\;  \forall n \in \mathbb{N}:\; |f_c^n(z)|\; \leqslant 2;\, n \to \infty\}
@@ -16,19 +16,19 @@ Mathematisch lässt sich die Menge iterativ wie folgt definiert:
 \end{equation}
 
 Wie in der Definition zu sehen, wird der Funktionswert der
-gegen Unendlich strebenden $n$-ten Iteration absolut betrachtet, da die
-Funktion symmetrisch zur reellen Achse ist.
+gegen Unendlich strebenden $n$-ten Iteration, ausgedrückt durch $f^n(z)$,
+absolut betrachtet, was bedeutet, dass die Funktion symmetrisch zur reellen Achse ist.
 
-Ebenfalls zu betrachten ist die Einschränkung auf Funktionswerte $\leqslant 2$,
-was mit dem Einheitskreis mit dem Radius 2 zusammenhängt
-\hyperref[app:4]{[Vgl. A.4]}.
-Für alle Funktionswerte, die sich in einer Iteration ergeben und außerhalb dieses Radius
-beziehungsweise dem Kreis liegen, lässt das jeweilige $c$ aus der Mandelbrot-Menge
+Ebenfalls zu betrachten ist die Einschränkung auf Funktionswerte $\leqslant 2$, denn
+für alle Funktionswerte, die sich in der oben genannten Iteration ergeben
+und $\leqslant 2$ sind, lässt sich das jeweilige $c$ aus der Mandelbrot-Menge
 ausschließen~\cite{munafo_escape_1997}.
 Obwohl der gesamte Beweis dessen den Rahmen dieser Arbeit sprengen würde,
 so soll dennoch angemerkt werden, dass mithilfe der Dreiecksungleichung und
 vollständiger Induktion unter der Vorausnahme von $|z_n| > 2 \text{ und } |z_n| > |c|$
 folgende Ungleichung, die eine divergente Entwicklung repräsentiert,
-$\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann, wobei zusätzlich gezeigt
-werden kann, dass für alle Werte von $|c| > 2$ nach spätestens 2 Iterationen gilt:
+$\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann, wobei sich zusätzlich zeigen
+lässt, dass für alle Werte von $|c| > 2$ nach spätestens 2 Iterationen gilt:
 $z_{n=2} = |c^2 + c| \geqslant |c|^2 - |c| > 2$.
+Deshalb befindet sich die grafische Darstellung der Mandelbrot-Menge in einem
+Einheitskreis mit dem Radius 2 \hyperref[app:4]{[Vgl. A.4]}.
