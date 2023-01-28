@@ -2,6 +2,7 @@
 
 Die Mandelbrot-Menge wird mit der bereits im vorherigen Kapitel vorgestellen,
 komplexen Iteration $z_{n+1} = z_n^2 + c \text{ mit } z_0 = 0$ und einem variablen
+% TODO: Update cite to new book
 Wert für $c$~\cite*[S.25]{schuh_fraktale_2017} definiert.
 Dabei enthält die Menge alle komplexen Werte für $c$, mit denen die
 oben angegebene Iteration beschränkt ist.
@@ -22,13 +23,13 @@ absolut betrachtet, was bedeutet, dass die Funktion symmetrisch zur reellen Achs
 Ebenfalls zu betrachten ist die Einschränkung auf Funktionswerte $\leqslant 2$, denn
 für alle Funktionswerte, die sich in der oben genannten Iteration ergeben
 und $\leqslant 2$ sind, lässt sich das jeweilige $c$ aus der Mandelbrot-Menge
-ausschließen~\cite{munafo_escape_1997}.
+ausschließen.
 Obwohl der gesamte Beweis dessen den Rahmen dieser Arbeit sprengen würde,
 so soll dennoch angemerkt werden, dass mithilfe der Dreiecksungleichung und
 vollständiger Induktion unter der Vorausnahme von $|z_n| > 2 \text{ und } |z_n| > |c|$
 folgende Ungleichung, die eine divergente Entwicklung repräsentiert,
-$\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann, wobei sich zusätzlich zeigen
-lässt, dass für alle Werte von $|c| > 2$ nach spätestens 2 Iterationen gilt:
-$z_{n=2} = |c^2 + c| \geqslant |c|^2 - |c| > 2$.
+$\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann~\cite{munafo_escape_1997},
+wobei sich zusätzlich zeigen lässt, dass für alle Werte von $|c| > 2$
+nach spätestens 2 Iterationen gilt: $z_{n=2} = |c^2 + c| \geqslant |c|^2 - |c| > 2$.
 Deshalb befindet sich die grafische Darstellung der Mandelbrot-Menge in einem
 Einheitskreis mit dem Radius 2 \hyperref[app:4]{[Vgl. A.4]}.
