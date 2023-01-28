@@ -4,9 +4,9 @@ Unter den komplexen Zahlen $\mathbb{C}$ versteht man die nächst größere Zahle
 nach den reellen Zahlen $\mathbb{R}$,
 die zus\"atzlich zu einem Realteil auch einen sogenannten Imagin\"arteil besitzen.
 Sie werden im weiteren Verlauf in der kartesischen Form
-\(z = a + bi\) dargestellt, wobei \(a\) der Realteil und \(bi\) der Imagin\"arteil ist.
-Der Buchstabe \(i\) steht hierbei für die imaginäre Einheit und
-ist definiert durch die Gleichung \(i^2 = -1\).
+$z = a + bi$ dargestellt, wobei $a$ der Realteil und $bi$ der Imagin\"arteil ist.
+Der Buchstabe $i$ steht hierbei für die imaginäre Einheit und
+ist definiert durch die Gleichung $i^2 = -1$.
 
 \subsubsection{Multiplikation \& Addition von komplexen Zahlen}
 \label{subsubsec:addition-and-multiplication-of-complex-numbers}
@@ -17,7 +17,7 @@ von den reellen oder natürlichen Zahlen gewohnt ist.
 Zur Addition zwei komplexer Zahlen addiert man den
 Realteil und den Imagin\"arteil getrennt voneinander und fügt diesen
 danach wieder zusammen~\cite[S. 2]{lichtenegger_komplexe_2002}:
-\((a_1 + {b_1}i) + (a_2 + {b_2}i) = a_1 + a_2 + (b_1 + b_2)i\).
+$(a_1 + {b_1}i) + (a_2 + {b_2}i) = a_1 + a_2 + (b_1 + b_2)i$.
 
 Um komplexe Zahlen zu multiplizieren, wendet man das Distributivgesetz an,
 indem man den zweiten Faktor ebenfalls in seinen Realteil und seinen
@@ -26,15 +26,15 @@ Imagin\"arteil trennt und diese jeweils einzeln mit dem ersten Faktor multiplizi
 Die zwei entstehenden Produkte lassen sich dann wie oben beschrieben addieren.
 Bei der Multiplikation mit dem Imagin\"arteil multipliziert man unter anderem
 zwei imagin\"are Elemente miteinander.
-Da \(i^2 = -1\) gilt, entsteht durch diese Multiplikation
+Da $i^2 = -1$ gilt, entsteht durch diese Multiplikation
 ein negatives, aber reales Produkt.
 Wie in \hyperref[app:1]{A.1} gezeigt, gilt somit:
-\( (a + bi)(c + di) = ac - bd + (bc + ad)i \)
+$ (a + bi)(c + di) = ac - bd + (bc + ad)i $
 
 Das für die Mandelbrot-Menge besonders wichtige Quadrieren von komplexen Zahlen
 lässt sich mit der kartesischen Form ebenfalls herleiten \hyperref[app:2]{[A.2]}.
-Für eine gegeben, zu quadrierende, komplexe Zahl \(a + bi\) gilt somit:
-\(a^2 - b^2 + 2abi\)
+Für eine gegeben, zu quadrierende, komplexe Zahl $a + bi$ gilt somit:
+$a^2 - b^2 + 2abi$
 
 
 Ein illustriertes Beispiel soll beide Rechenoperationen veranschaulichen:
@@ -69,7 +69,7 @@ braucht man eine \textbf{Ebene}\footnote{
 }.
 Diese komplexe Zahlenebene teilt den Realteil auf der waagerechten Achse und
 den Imagin\"arteil auf die horizontale Achse auf.
-Eine komplexe Zahl \(z_1 = a + bi\) besitzt somit die Koordinaten \( P(a|b)\).
+Eine komplexe Zahl $z_1 = a + bi$ besitzt somit die Koordinaten $ P(a|b)$.
 
 
 Eine komplexe Zahl lässt sich wie auch eine reelle Zahl absolut betrachten, wobei
@@ -94,27 +94,27 @@ der Abstand über den Satz des Pythagoras berechnen:
         \draw (2,0) -- (2,3);
         \draw (0,0) -- (2,3);
         \fill[fill=gray!15] (0,0)--(2, 0)--(2,3);
-        \node at (1,0.25) {\( x \)};
-        \node at (2.25,1.5) {\( y \)};
-        \node at (0.70,1.5) {\( |z| \)};
+        \node at (1,0.25) {$ x $};
+        \node at (2.25,1.5) {$ y $};
+        \node at (0.70,1.5) {$ |z| $};
 
         \draw [fill=black] (2,3) circle(0.05);
         \draw [fill=black] (-3.4, -1.75) circle(0.05);
-        \node at (2.75,3.25) {\( P_1(2|3i)\)};
-        \node at (-2,-1.50) {\( P_2(-3.4|-1.75i)\)};
+        \node at (2.75,3.25) {$ P_1(2|3i)$};
+        \node at (-2,-1.50) {$ P_2(-3.4|-1.75i)$};
 
         \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
         \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
 
         \foreach \n in {-3,...,-1,1,2,...,3}{
-          \draw (\n, 3pt) -- (\n, -3pt)   node [below] {\(\n\)};
-          \draw (3pt,\n) -- (-3pt,\n)   node [left] {\(\n i\)};
+          \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
+          \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
         }
       \end{scope}
     \end{tikzpicture}
     \caption{
-      Komplexe Ebene mit den Punkten \( P_1, \text{ und } P_2\)
-      und dem absoluten Wert \(|z| \text{ vom Punkt } P_1\)
+      Komplexe Ebene mit den Punkten $ P_1, \text{ und } P_2$
+      und dem absoluten Wert $|z| \text{ vom Punkt } P_1$.
     }
   \end{center}
 \end{figure}
