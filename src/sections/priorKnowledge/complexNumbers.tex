@@ -87,34 +87,33 @@ der Abstand über den Satz des Pythagoras berechnen:
 \end{equation}
 
 \begin{figure}[H]\label{fig:complex-numbers-figure-example}
-  \begin{center}
-    \begin{tikzpicture}
-      \begin{scope}[thick,font=\scriptsize]
-        \draw (0,0) -- (0,2);
-        \draw (2,0) -- (2,3);
-        \draw (0,0) -- (2,3);
-        \fill[fill=gray!15] (0,0)--(2, 0)--(2,3);
-        \node at (1,0.25) {$ x $};
-        \node at (2.25,1.5) {$ y $};
-        \node at (0.70,1.5) {$ |z| $};
+  \centering
+  \begin{tikzpicture}
+    \begin{scope}[thick,font=\scriptsize]
+      \draw (0,0) -- (0,2);
+      \draw (2,0) -- (2,3);
+      \draw (0,0) -- (2,3);
+      \fill[fill=gray!15] (0,0)--(2, 0)--(2,3);
+      \node at (1,0.25) {$ x $};
+      \node at (2.25,1.5) {$ y $};
+      \node at (0.70,1.5) {$ |z| $};
 
-        \draw [fill=black] (2,3) circle(0.05);
-        \draw [fill=black] (-3.4, -1.75) circle(0.05);
-        \node at (2.75,3.25) {$ P_1(2|3i)$};
-        \node at (-2,-1.50) {$ P_2(-3.4|-1.75i)$};
+      \draw [fill=black] (2,3) circle(0.05);
+      \draw [fill=black] (-3.4, -1.75) circle(0.05);
+      \node at (2.75,3.25) {$ P_1(2|3i)$};
+      \node at (-2,-1.50) {$ P_2(-3.4|-1.75i)$};
 
-        \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
-        \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+      \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
+      \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
 
-        \foreach \n in {-3,...,-1,1,2,...,3}{
-          \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
-          \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
-        }
-      \end{scope}
-    \end{tikzpicture}
-    \caption{
-      Komplexe Ebene mit den Punkten $ P_1, \text{ und } P_2$
-      und dem absoluten Wert $|z| \text{ vom Punkt } P_1$.
-    }
-  \end{center}
+      \foreach \n in {-3,...,-1,1,2,...,3}{
+        \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
+        \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
+      }
+    \end{scope}
+  \end{tikzpicture}
+  \caption{
+    Komplexe Ebene mit den Punkten $ P_1, \text{ und } P_2$
+    und dem absoluten Wert $|z| \text{ vom Punkt } P_1$.
+  }
 \end{figure}

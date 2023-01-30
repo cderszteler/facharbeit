@@ -29,48 +29,45 @@
 
 \noindent\textbf{A.3:}\label{app:3}
 \begin{figure}[H]\figuretag{A.3}\label{fig:benoit-mandelbrot-picture}
-\begin{center}
+  \centering
   \includegraphics[width=0.7\textwidth]{images/benoit-mandelbrot}
   \caption{Benoît Mandelbrot 1997 in Frankreich~\cite{gaillarde_benoit_1997}.}
-\end{center}
 \end{figure}
 
 \noindent\textbf{A.4:}\label{app:4}
 \begin{figure}[H]\figuretag{A.4}\label{fig:escape-radius}
-  \begin{center}
-    \begin{tikzpicture}
-      \begin{scope}[thick,font=\scriptsize]
-        \fill[draw=black, fill=white] (0,0) circle (2);
+  \centering
+  \begin{tikzpicture}
+    \begin{scope}[thick,font=\scriptsize]
+      \fill[draw=black, fill=white] (0,0) circle (2);
 
-        \draw [fill=black] (1,1.6) circle(0.05);
-        \draw [fill=black] (-3,2.75) circle(0.05);
-        \node at (1.75,1.85) {$ P_1(1|1.6i)$};
-        \node at (-1.75,3) {$ P_2(-3|2.75i)$};
+      \draw [fill=black] (1,1.6) circle(0.05);
+      \draw [fill=black] (-3,2.75) circle(0.05);
+      \node at (1.75,1.85) {$ P_1(1|1.6i)$};
+      \node at (-1.75,3) {$ P_2(-3|2.75i)$};
 
-        \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
-        \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+      \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
+      \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
 
-        \foreach \n in {-3,...,-1,1,2,...,3}{
-          \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
-          \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
-        }
-      \end{scope}
-    \end{tikzpicture}
-    \caption{
-      Einheitskreis mit dem Radius 2. Zu sehen ist der Punkt $P_1$, der im
-      Einheitskreis liegt und Punkt $P_2$, der außerhalb des Einheitskreises liegt.
-    }
-  \end{center}
+      \foreach \n in {-3,...,-1,1,2,...,3}{
+        \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
+        \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
+      }
+    \end{scope}
+  \end{tikzpicture}
+  \caption{
+    Einheitskreis mit dem Radius 2. Zu sehen ist der Punkt $P_1$, der im
+    Einheitskreis liegt und Punkt $P_2$, der außerhalb des Einheitskreises liegt.
+  }
 \end{figure}
 
 \noindent\textbf{A.5:}\label{app:5}
 \begin{figure}[H]\figuretag{A.5}\label{fig:body-and-head-of-mandelbrot-set}
-\begin{center}
+  \centering
   \includegraphics[width=0.7\textwidth]{images/bodyHeadMandelbrotSet}
   \caption{
     K\"orper (B) und Kopf (H) der Mandelbrot-Menge~\cite{mahanta_mandelbrot_2016}.
   }
-\end{center}
 \end{figure}
 
 \noindent\textbf{A.6:}\label{app:6}
