@@ -9,7 +9,7 @@ oben angegebene Iteration beschränkt ist.
 Mathematisch ist die Menge iterativ wie folgt definiert:
 
 \begin{equation}\label{eq:mathematical-definition}
-  \mathbb{M} = \{c \in \mathbb{C} \; |\;  \forall n \in \mathbb{N}:\; |f_c^n(z)|\; \leqslant 2;\, n \to \infty\}
+  \mathbb{M} = \{c \in \mathbb{C} \; |\;  \forall n \in \mathbb{N}:\; |f_c^n(z)|\; \leqslant 2\}
   \quad
   \text{mit}
   \quad
@@ -22,14 +22,15 @@ absolut betrachtet, was bedeutet, dass die Funktion symmetrisch zur reellen Achs
 
 Ebenfalls zu betrachten ist die Einschränkung auf Funktionswerte $\leqslant 2$, denn
 für alle Funktionswerte, die sich in der oben genannten Iteration ergeben
-und $\leqslant 2$ sind, lässt sich das jeweilige $c$ aus der Mandelbrot-Menge
+und $> 2$ sind, lässt sich das jeweilige $c$ aus der Mandelbrot-Menge
 ausschließen.
-Obwohl der gesamte Beweis dessen den Rahmen dieser Arbeit sprengen würde,
+Obwohl der gesamte Beweis dessen über den Rahmen dieser Arbeit hinausginge,
 so soll dennoch angemerkt werden, dass mithilfe der Dreiecksungleichung und
 vollständiger Induktion unter der Vorausnahme von $|z_n| > 2 \text{ und } |z_n| > |c|$
 folgende Ungleichung, die eine divergente Entwicklung repräsentiert,
 $\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann~\cite{munafo_escape_1997},
 wobei sich zusätzlich zeigen lässt, dass für alle Werte von $|c| > 2$
 nach spätestens 2 Iterationen gilt: $z_{n=2} = |c^2 + c| \geqslant |c|^2 - |c| > 2$.
-Deshalb befindet sich die grafische Darstellung der Mandelbrot-Menge in einem
-Einheitskreis mit dem Radius 2 \hyperref[app:4]{[Vgl. A.4]}.
+
+Es befinden sich deshalb alle Werte für $c$ als auch somit die grafische Darstellung
+der Mandelbrot-Menge in einem Einheitskreis mit dem Radius 2 \hyperref[app:4]{[Vgl. A.4]}.

@@ -13,6 +13,8 @@ ist definiert durch die Gleichung $i^2 = -1$.
 
 Viele Rechenoperationen mit komplexen Zahlen funktionieren anders, als man sie
 von den reellen oder natürlichen Zahlen gewohnt ist.
+Im Folgenden werden zwei dieser unterschiedlich funktionierenden
+Operationen vorgestellt:
 
 Zur Addition zwei komplexer Zahlen addiert man den
 Realteil und den Imagin\"arteil getrennt voneinander und fügt diesen
@@ -31,10 +33,10 @@ ein negatives, aber reales Produkt.
 Wie in \hyperref[app:1]{A.1} gezeigt, gilt somit:
 $ (a + bi)(c + di) = ac - bd + (bc + ad)i $
 
-Das für die Mandelbrot-Menge besonders wichtige Quadrieren von komplexen Zahlen
+Das in der Mandelbrot-Menge häufig angewandte Quadrieren von komplexen Zahlen,
 lässt sich mit der kartesischen Form ebenfalls herleiten \hyperref[app:2]{[A.2]}.
 Für eine gegeben, zu quadrierende, komplexe Zahl $a + bi$ gilt somit:
-$a^2 - b^2 + 2abi$
+$(a + bi)^2 = a^2 - b^2 + 2abi$
 
 
 Ein illustriertes Beispiel soll beide Rechenoperationen veranschaulichen:
@@ -63,13 +65,13 @@ Ein illustriertes Beispiel soll beide Rechenoperationen veranschaulichen:
 Komplexe Zahlen können wie auch Zahlen anderer Zahlenmengen grafisch
 dargestellt werden.
 Da komplexe Zahlen jedoch sowohl aus einem Realteil und einem Imagin\"arteil
-bestehen, reicht eine Gerade nicht aus, um diese darzustellen, stattdessen
-braucht man eine \textbf{Ebene}\footnote{
-  Ebenfalls unter komplexer Zahlenebene und gaußscher Zahlenebene zu finden.
+bestehen, reicht eine Achse nicht aus, um diese darzustellen;
+stattdessen braucht man eine \textbf{Ebene}\footnote{
+  Ebenfalls unter komplexer Zahlenebene und gaußsche Zahlenebene zu finden.
 }.
-Diese komplexe Zahlenebene teilt den Realteil auf der waagerechten Achse und
+Diese komplexe Zahlenebene teilt den Realteil auf die waagerechte Achse und
 den Imagin\"arteil auf die horizontale Achse auf.
-Eine komplexe Zahl $z_1 = a + bi$ besitzt somit die Koordinaten $ P(a|b)$.
+Eine komplexe Zahl $z = a + bi$ besitzt somit die Koordinaten $ P(a|b)$.
 
 
 Eine komplexe Zahl lässt sich wie auch eine reelle Zahl absolut betrachten, wobei
@@ -79,11 +81,11 @@ Aufgrund dessen, dass eine komplexe Zahl aus zwei Komponenten besteht, lässt si
 der Abstand über den Satz des Pythagoras berechnen:
 
 \begin{equation}\label{eq:absolute-complex-number}
-  |z|^2 = x^2 + y^2
+  |z|^2 = a^2 + b^2
   \quad
   \text{ beziehungsweise }
   \quad
-  z = \sqrt{x^2 + y^2}
+  z = \sqrt{a^2 + b^2}
 \end{equation}
 
 \begin{figure}[H]\label{fig:complex-numbers-figure-example}
@@ -94,8 +96,8 @@ der Abstand über den Satz des Pythagoras berechnen:
       \draw (2,0) -- (2,3);
       \draw (0,0) -- (2,3);
       \fill[fill=gray!15] (0,0)--(2, 0)--(2,3);
-      \node at (1,0.25) {$ x $};
-      \node at (2.25,1.5) {$ y $};
+      \node at (1,0.25) {$ a $};
+      \node at (2.25,1.5) {$ b $};
       \node at (0.70,1.5) {$ |z| $};
 
       \draw [fill=black] (2,3) circle(0.05);
