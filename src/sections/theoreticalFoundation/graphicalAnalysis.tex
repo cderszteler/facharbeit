@@ -1,0 +1,64 @@
+\subsection{Grafische Analyse}\label{subsec:graphical-analysis}
+
+Wie bereits mehrfach erwähnt, lässt sich die Mandelbrot-Menge grafisch darstellen.
+Im Folgenden soll dafür der grundlegende Aufbau der in einem kartesischen Diagramm
+entstehenden Formation erörtert als auch eine Erklärung zur Darstellungsweise
+und im Späteren aufkommenden Farbkodierung gegeben werden.
+
+% TODO: Replace image with own
+\bigskip
+\begin{figure}[h!]\label{fig:mandelbrot-set}
+\begin{center}
+  \includegraphics[width=\textwidth]{images/exampleImage}
+  \caption[Caption for LOF]{
+    Exemplarische Darstellung der Mandelbrot-Menge\footnotemark
+  }
+\end{center}
+\end{figure}
+% TODO: Add hyperref to code in appendix
+\footnotetext{Generiert durch den Code \cdots}
+
+Die hier zu sehende Grafik entspricht der Darstellung der Mandelbrot-Menge
+in einer komplexen Zahlenebene und wird aufgrund seiner Form
+\glqq Apfelm\"annchen\grqq~genannt.
+Neben der großen Abbildung in der Mitte, lassen sich,
+zum Beispiel im negativen Teil der reellen Achse,
+ebenfalls deutlich kleinere, ähnlich aussende Formationen um den
+eigentlichen Hauptkörper, dem Apfelm\"anchen, erkennen.
+Diese werden Satelliten genannt und existieren aufgrund der Selbstähnlichkeit
+der Mandelbrot-Menge in unendlicher Stückzahl - und zwar nicht nur für den Hauptkörper,
+sondern auch für jeden Satelliten selbst~\cite{lomonaco_quasi-conformal_2018}.
+
+\subsubsection{Exemplarische Kartografierung}
+
+Die entstehenden Formationen der Mandelbrot-Menge, die teilweise erst bei sehr
+kleinen Ausschnitten erkennbar sind, sind kartografiert und oft durch
+ein ähnliches Aussehen nach Objekten der realen Welt benannt.
+So bezeichnet man die größte kreisförmige Kardioide oder auch \glqq Knospe\grqq
+~als \glqq K\"orper\grqq~(wobei diese tiefer unterteilt werden kann)
+und die daran angrenzende Kardioide als
+\glqq Kopf\grqq\footnote{Vgl. \hyperref[app:5]{A.5}}.
+Obwohl man jeden Punkt beziehungsweise jeden Ausschnitt beliebig genau
+analysieren kann, werden aufgrund der Selbstähnlichkeit Elemente mit ähnlichem
+oder gleichen Aufbau erneut aufkehren.
+Im Folgenden soll beispielhaft ein Ausschnitt des in diesem
+Video~\cite{beyer_zoomfahrt_2017} gezeigten
+\glqq Tal der Seepferdchen\grqq~analysiert werden:
+
+Die Spalte zwischen Kopf und K\"orper wird \glqq Tal der Seepferdchen\grqq
+~genannt\footnote{Vgl. \hyperref[app:6.1]{A.6.1}}
+~\cite{robert_p_seahorse_2010}, da bei Vergrößerung dieses Ausschnitts
+sich unter anschaulicher Farbkodierung auf der rechten Seite
+Seepferdchen-ähnliche Formationen erkennen lassen\footnote{Vgl. \hyperref[app:6.2]{A.6.2}}.
+Vergrößert man die Sicht auf das Seepferdchen-Tal stark, so lassen sich,
+neben weiteren (teils deformierten) Satelliten\footnote{Vgl. \hyperref[app:6.3]{A.6.3}},
+bei genauerer Betrachtung des \glqq Seepferdchenschwanzes\grqq~ein
+Misiurewicz-Punkt erkennen\footnote{Vgl. \hyperref[app:6.4]{A.6.4}}.
+Dieser Misiurewicz-Punkt zeigt ebenfalls die Selbstähnlichkeit der Mandelbrot-Menge auf,
+da dieser Punkt sich neben einer Drehung kaum von der eigentlichen
+Mandelbrot-Menge unterscheidet~\cite{lei_similarity_1989}.
+Vergrößert man diesen Punkt weiter, so findet man erneut einen im Vergleich
+zum Apfelm\"annchen sehr ähnlichen aussehenden
+Satelliten\footnote{Vgl. \hyperref[app:6.5]{A.6.5}}.
+
+\subsubsection{Farbbedeutung und -kodierung}

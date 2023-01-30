@@ -1,21 +1,22 @@
 \newsection{Anhang}{appendix}
-\renewcommand{\theequation}{A.\arabic{equation}}
-\renewcommand{\thefigure}{A.\arabic{figure}}
-
+\newcommand{\figuretag}[1]{%
+  \addtocounter{figure}{-1}%
+  \renewcommand{\thefigure}{#1}%
+}
 \noindent\textbf{A.1:}\label{app:1}
-\begin{equation}\label{eq:complex-numbers-multiplication}
+\begin{equation}\tag{A.1}\label{eq:complex-numbers-multiplication}
   \begin{split}
     z_1 \cdot z_2 \\
     (a + bi) \cdot (c + di) \\
     =  c(a + bi) + di(a + bi) \\
-    = ac +bci + adi + bdi^2 \\
+    = ac + bci + adi + bdi^2 \\
     = ac + bci + adi \boldsymbol{ - } bd \\
     = ac - bd +(bc + ad)i
   \end{split}
 \end{equation}
 
 \noindent\textbf{A.2:}\label{app:2}
-\begin{equation}\label{eq:complex-numbes-squaring}
+\begin{equation}\tag{A.2}\label{eq:complex-numbes-squaring}
   \begin{split}
     z_1^2
     = z_1 \cdot z_1 \\
@@ -27,7 +28,7 @@
 \end{equation}
 
 \noindent\textbf{A.3:}\label{app:3}
-\begin{figure}[H]\label{fig:benoit-mandelbrot-picture}
+\begin{figure}[H]\figuretag{A.3}\label{fig:benoit-mandelbrot-picture}
 \begin{center}
   \includegraphics[width=0.7\textwidth]{images/benoit-mandelbrot}
   \caption{Benoît Mandelbrot 1997 in Frankreich~\cite{gaillarde_benoit_1997}.}
@@ -35,29 +36,88 @@
 \end{figure}
 
 \noindent\textbf{A.4:}\label{app:4}
-\begin{figure}[H]\label{fig:escape-radius}
+\begin{figure}[H]\figuretag{A.4}\label{fig:escape-radius}
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{scope}[thick,font=\scriptsize]
+        \fill[draw=black, fill=white] (0,0) circle (2);
+
+        \draw [fill=black] (1,1.6) circle(0.05);
+        \draw [fill=black] (-3,2.75) circle(0.05);
+        \node at (1.75,1.85) {$ P_1(1|1.6i)$};
+        \node at (-1.75,3) {$ P_2(-3|2.75i)$};
+
+        \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
+        \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
+
+        \foreach \n in {-3,...,-1,1,2,...,3}{
+          \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
+          \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
+        }
+      \end{scope}
+    \end{tikzpicture}
+    \caption{
+      Einheitskreis mit dem Radius 2. Zu sehen ist der Punkt $P_1$, der im
+      Einheitskreis liegt und Punkt $P_2$, der außerhalb des Einheitskreises liegt.
+    }
+  \end{center}
+\end{figure}
+
+\noindent\textbf{A.5:}\label{app:5}
+\begin{figure}[H]\figuretag{A.5}\label{fig:body-and-head-of-mandelbrot-set}
 \begin{center}
-  \begin{tikzpicture}
-    \begin{scope}[thick,font=\scriptsize]
-      \fill[draw=black, fill=white] (0,0) circle (2);
-
-      \draw [fill=black] (1,1.6) circle(0.05);
-      \draw [fill=black] (-3,2.75) circle(0.05);
-      \node at (1.75,1.85) {$ P_1(1|1.6i)$};
-      \node at (-1.75,3) {$ P_2(-3|2.75i)$};
-
-      \draw [->] (-4,0) -- (4,0) node [above left]  {$Re$};
-      \draw [->] (0,-4) -- (0,4) node [below right] {$Im$};
-
-      \foreach \n in {-3,...,-1,1,2,...,3}{
-        \draw (\n, 3pt) -- (\n, -3pt)   node [below] {$\n$};
-        \draw (3pt,\n) -- (-3pt,\n)   node [left] {$\n i$};
-      }
-    \end{scope}
-  \end{tikzpicture}
+  \includegraphics[width=0.7\textwidth]{images/bodyHeadMandelbrotSet}
   \caption{
-    Einheitskreis mit dem Radius 2. Zu sehen ist der Punkt $P_1$, der im
-    Einheitskreis liegt und Punkt $P_2$, der außerhalb des Einheitskreises liegt.
+    K\"orper (B) und Kopf (H) der Mandelbrot-Menge~\cite{mahanta_mandelbrot_2016}.
   }
 \end{center}
+\end{figure}
+
+\noindent\textbf{A.6:}\label{app:6}
+\begin{figure}[H]\figuretag{A.6}\label{fig:mandelbrot-set-zoom-images}
+  \centering
+  \begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/zoom/800px-Mandel_zoom_01_head_and_shoulder}
+    \figuretag{A.6.1}
+    \vspace*{-4ex}
+    \caption{Spalte zwischen Kopf und K\"orper~\cite{beyer_partial_2005}}
+    \label{app:6.1}
+  \end{minipage}%
+  \hspace{8ex}
+  \begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/zoom/800px-Mandel_zoom_02_seehorse_valley}
+    \figuretag{A.6.2}
+    \vspace*{-4ex}
+    \caption{\grqq Tal der Seepferdchen\glqq~\cite{beyer_partial_2005-1}}
+    \label{app:6.2}
+  \end{minipage}
+  \\[4ex]
+  \begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/zoom/800px-Mandel_zoom_03_seehorse}
+    \figuretag{A.6.3}
+    \vspace*{-4ex}
+    \caption{Rechts ein deformierter Satellit und links Misiurewicz-Punkt~\cite{beyer_partial_2005-2}}
+    \label{app:6.3}
+  \end{minipage}%
+  \hspace{8ex}
+  \begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/zoom/800px-Mandel_zoom_04_seehorse_tail}
+    \figuretag{A.6.4}
+    \vspace*{-4ex}
+    \caption{Misiurewicz-Punkt~\cite{beyer_partial_2005-3}}
+    \label{app:6.4}
+  \end{minipage}
+  \\[4ex]
+  \begin{minipage}[t]{\textwidth}
+    \centering
+    \includegraphics[width=0.45\linewidth]{images/zoom/800px-Mandel_zoom_08_satellite_antenna}
+    \figuretag{A.6.5}
+    \vspace*{-2ex}
+    \caption{Satellit mit ähnlicher Struktur wie das Apfelm\"annchen~\cite{beyer_partial_2005-4}}
+    \label{app:6.5}
+  \end{minipage}
 \end{figure}
