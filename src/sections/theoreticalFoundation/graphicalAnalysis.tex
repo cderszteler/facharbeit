@@ -8,12 +8,13 @@ verschiedene, sich wiederholende Bereiche der visuellen Darstellung auf.
 
 % TODO: Replace image with own
 \bigskip
-\begin{figure}[h!]\label{fig:mandelbrot-set}
+\begin{figure}[h!]
   \centering
   \includegraphics[width=\textwidth]{images/exampleImage}
   \caption[Caption for LOF]{
     Exemplarische Darstellung der Mandelbrot-Menge\footnotemark
   }
+  \label{fig:mandelbrot-set}
 \end{figure}
 % TODO: Add hyperref to code in appendix
 \footnotetext{Generiert durch den Code $\cdots$}
@@ -46,7 +47,9 @@ kleine Satelliten als Druckfehler gewertet wurden\footnote{
 }
 und die mit ihrem schwarz-weißen Druck nur zwischen Werte für $c$ \textbf{in}
 und \textbf{außerhalb} der Mandelbrot-Menge unterschieden,
-besitzt die oben dargestellte \hyperref[fig:mandelbrot-set]{Figur (3.1)} einen Farbverlauf.
+besitzt die oben dargestellte
+~\hyperref[fig:mandelbrot-set]{Figur (\ref{fig:mandelbrot-set})}
+einen Farbverlauf.
 Ein schwarzer Pixel repräsentiert dabei einen Wert für $c$, der sich innerhalb der
 Mandelbrot-Menge befindet.
 Der, in diesem Fall grüne, Farbverlauf gibt an, wie viele Iterationen es benötigte,
@@ -54,7 +57,7 @@ um festzustellen, ob das jeweilige $c$ außerhalb der Mandelbrot-Menge liegt.
 Dabei gilt, dass je heller der Pixel beziehungsweise $c$ ist, desto mehr
 Iterationen benötigte es, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
   Vgl. z.B. dick markierten Werte für $c_1 = 1 \text{ und } c_3 = 0.5$ in
-  \hyperref[tab:iterations-example]{Tabelle 2.1}.
+  \hyperref[tab:iterations-example]{Tabelle~\ref{tab:iterations-example}}.
   $c_1$ ließ sich nach der 3. Iteration aus der Mandelbrot-Menge ausschließen,
   hingegen war dies bei $c_3$ erst nach der 5. Iteration der Fall.
 }.
