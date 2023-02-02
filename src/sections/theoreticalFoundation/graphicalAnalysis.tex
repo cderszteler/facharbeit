@@ -2,8 +2,9 @@
 
 Im Folgenden soll der grundlegende Aufbau der in einem kartesischen Diagramm
 entstehenden Formation der Mandelbrot-Menge erörtert als auch eine
-Erklärung zur Darstellungsweise und der im Späteren aufkommenden
-Farbkodierung gegeben werden.
+Erklärung zur Farbbedeutung gegeben werden.
+Zusätzlich zeigt dieses Unterkapitel mit einer exemplarischen Kartografierung
+verschiedene, sich wiederholende Bereiche der visuellen Darstellung auf.
 
 % TODO: Replace image with own
 \bigskip
@@ -28,6 +29,35 @@ Diese werden \textbf{Satelliten} genannt und existieren aufgrund der Selbstähnl
 der Mandelbrot-Menge in unendlicher Stückzahl - und zwar nicht nur für den Hauptkörper,
 sondern auch für jeden Satelliten selbst~\cite{lomonaco_quasi-conformal_2018}.
 
+\subsubsection{Farbbedeutung}
+
+Im Gegensatz zu den ersten grafischen Darstellungen der Mandelbrot-Menge,
+auf denen, aufgrund ihrer deutlich geringeren Auflösung,
+kleine Satelliten als Druckfehler gewertet wurden\footnote{
+  Dies ist eine recht amüsante Anekdote: Während den frühsten Forschungen,
+  die Benoît Mandelbrot in den 1970er bei IBM anstellte, war das Drucken deutlich
+  mühseliger und aufwendiger, als es heutzutage ist.
+  Deshalb existierte ein ganzes Abteil nur für die Herstellung und Bearbeitung von
+  Drucks, die - da es damals häufig vorkam - kleine Satelliten am Rande der ersten
+  Darstellungen \hyperref[app:7]{[A.7]} gutgemeint wegretuschierten.
+  Die ersten Bilder, die Herr Mandelbrot also erhielt, verwunderten ihn sehr und
+  er war äußerst aufgebracht, als er von der tolpatschigen Wahrheit erfur
+  ~\cite{numberphile_whats_nodate}.
+}
+und die mit ihrem schwarz-weißen Druck nur zwischen Werte für $c$ \textbf{in}
+und \textbf{außerhalb} der Mandelbrot-Menge unterschieden,
+besitzt die oben dargestellte \hyperref[fig:mandelbrot-set]{Figur (3.1)} einen Farbverlauf.
+Ein schwarzer Pixel repräsentiert dabei einen Wert für $c$, der sich innerhalb der
+Mandelbrot-Menge befindet.
+Der, in diesem Fall grüne, Farbverlauf gibt an, wie viele Iterationen es benötigte,
+um festzustellen, ob das jeweilige $c$ außerhalb der Mandelbrot-Menge liegt.
+Dabei gilt, dass je heller der Pixel beziehungsweise $c$ ist, desto mehr
+Iterationen benötigte es, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
+  Vgl. z.B. dick markierten Werte für $c_1 = 1 \text{ und } c_3 = 0.5$ in
+  \hyperref[tab:iterations-example]{Tabelle 2.1}.
+  $c_1$ ließ sich nach der 3. Iteration aus der Mandelbrot-Menge ausschließen,
+  hingegen war dies bei $c_3$ erst nach der 5. Iteration der Fall.
+}.
 \subsubsection{Exemplarische Kartografierung}
 
 Die entstehenden Formationen der Mandelbrot-Menge, die teilweise erst bei sehr
@@ -60,5 +90,3 @@ Mandelbrot-Menge unterscheidet~\cite{lei_similarity_1989}.
 Vergrößert man diesen Punkt weiter, so findet man erneut einen im Vergleich
 zum Apfelm\"annchen sehr ähnlichen aussehenden
 Satelliten\footnote{Vgl. \hyperref[app:6.5]{A.6.5}}.
-
-\subsubsection{Farbbedeutung und -kodierung}
