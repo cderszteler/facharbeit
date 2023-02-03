@@ -22,10 +22,13 @@ verschiedene, sich wiederholende Bereiche der visuellen Darstellung auf.
 Die hier zu sehende Grafik entspricht der Darstellung der Mandelbrot-Menge
 in einer komplexen Zahlenebene und wird aufgrund seiner Form
 \glqq Apfelm\"annchen\grqq~genannt.
-Neben der großen, einheitlichen Struktur in der Mitte, lassen sich,
-zum Beispiel im negativen Teil der reellen Achse,
-ebenfalls deutlich kleinere, ähnlich aussende Formationen um den
-eigentlichen Hauptkörper, dem Apfelm\"anchen, erkennen.
+Die zu sehenden, schwarz gefärbten Pixel repräsentieren einen
+jeweiligen Wert für $c$, der sich in der Mandelbrot-Menge befindet.
+Auffällig ist bei erster Betrachtung, dass sich neben der großen,
+einheitlichen Struktur in der Mitte,
+deutlich kleinere, ähnlich aussende Formationen um den eigentlichen Hauptkörper
+dem Apfelm\"anchen, zum Beispiel im negativen Teil der reellen Achse,
+erkennen lassen.
 Diese werden \textbf{Satelliten} genannt und existieren aufgrund der Selbstähnlichkeit
 der Mandelbrot-Menge in unendlicher Stückzahl - und zwar nicht nur für den Hauptkörper,
 sondern auch für jeden Satelliten selbst~\cite{lomonaco_quasi-conformal_2018}.
@@ -50,22 +53,32 @@ und \textbf{außerhalb} der Mandelbrot-Menge unterschieden,
 besitzt die oben dargestellte
 ~\hyperref[fig:mandelbrot-set]{Figur (\ref{fig:mandelbrot-set})}
 einen Farbverlauf.
-Ein schwarzer Pixel repräsentiert dabei einen Wert für $c$, der sich innerhalb der
-Mandelbrot-Menge befindet.
-Der, in diesem Fall grüne, Farbverlauf gibt an, wie viele Iterationen es benötigte,
+Dieser, in diesem Fall grüne, Farbgradient gibt an, wie viele Iterationen es benötigte,
 um festzustellen, ob das jeweilige $c$ außerhalb der Mandelbrot-Menge liegt.
 Dabei gilt, dass je heller der Pixel beziehungsweise $c$ ist, desto mehr
-Iterationen benötigte es, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
+Iterationen hat es benötigt, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
   Vgl. z.B. dick markierten Werte für $c_1 = 1 \text{ und } c_3 = 0.5$ in
   \hyperref[tab:iterations-example]{Tabelle~\ref{tab:iterations-example}}.
   $c_1$ ließ sich nach der 3. Iteration aus der Mandelbrot-Menge ausschließen,
   hingegen war dies bei $c_3$ erst nach der 5. Iteration der Fall.
 }.
+
+Neben dieser einen, verhältnismäßig simplen und dementsprechend auf den ersten
+Blick aussagekräftigeren Farbkodierung, existiert eine Vielzahl teils deutlich
+umfangreicheren Algorithmen, mit denen sich jedoch eine auf das menschliche Auge
+ansprechendere Farbgestaltung erzielen lässt.
+Diese werden in Kapitel $\cdots$ % TODO: Add \ref to chatper
+genauer beschrieben.
+Eine Reihe an solchen komplexere Farbverläufe benutzenden Beispielen,
+auf die im nächsten Unterkapitel Bezug genommen wird,
+lässt sich in \hyperref[app:6]{A.6} betrachten.
+
 \subsubsection{Exemplarische Kartografierung}
 
-Die entstehenden Formationen der Mandelbrot-Menge, die teilweise erst bei sehr
-kleinen Ausschnitten erkennbar sind, sind kartografiert und teilweise
-wegen einer gewissen Ähnlichkeit nach Objekten aus der realen Welt benannt.
+Die hingegen von der Farbe unabhängigen, entstehenden Formationen der
+Mandelbrot-Menge, die teilweise erst bei sehr kleinen Ausschnitten erkennbar sind,
+sind kartografiert und teilweise wegen einer gewissen Ähnlichkeit nach
+Objekten aus der realen Welt benannt.
 So bezeichnet man die größte kreisförmige Kardioide oder auch \glqq Knospe\grqq
 ~als \glqq K\"orper\grqq~(wobei dieser genauer unterteilt werden kann)
 und die daran angrenzende Kardioide als
