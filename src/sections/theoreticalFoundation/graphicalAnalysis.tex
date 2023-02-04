@@ -6,11 +6,9 @@ Erklärung zur Farbbedeutung gegeben werden.
 Zusätzlich zeigt dieses Unterkapitel mit einer exemplarischen Kartografierung
 verschiedene, sich wiederholende Bereiche der visuellen Darstellung auf.
 
-% TODO: Replace image with own
-\bigskip
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{images/exampleImage}
+  \includegraphics[width=\textwidth]{images/mandelbrotImage}
   \caption[Caption for LOF]{
     Exemplarische Darstellung der Mandelbrot-Menge\footnotemark
   }
@@ -53,7 +51,8 @@ und \textbf{außerhalb} der Mandelbrot-Menge unterschieden,
 besitzt die oben dargestellte
 \hyperref[fig:mandelbrot-set]{Figur (\ref{fig:mandelbrot-set})}
 einen Farbverlauf.
-Dieser, in diesem Fall grüne, Farbgradient gibt an, wie viele Iterationen es benötigte,
+Dieser, in diesem Fall türkisblaue, Farbgradient gibt an,
+wie viele Iterationen es benötigte,
 um festzustellen, ob das jeweilige $c$ außerhalb der Mandelbrot-Menge liegt.
 Dabei gilt, dass je heller der Pixel beziehungsweise $c$ ist, desto mehr
 Iterationen hat es benötigt, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
@@ -62,6 +61,9 @@ Iterationen hat es benötigt, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
   $c_1$ ließ sich nach der 3. Iteration aus der Mandelbrot-Menge ausschließen,
   hingegen war dies bei $c_3$ erst nach der 5. Iteration der Fall.
 }.
+Deshalb existiert ein hell erscheinender Rand um die schwarzen Formationen,
+da es für diese Werte außerhalb von $\mathbb{M}$, die sehr nah an tatsächlichen
+Werten für $\mathbb{M}$ sind, es viele Iterationen benötigt, um diese auszuschließen.
 
 Neben dieser einen, verhältnismäßig simplen und dementsprechend auf den ersten
 Blick aussagekräftigeren Farbkodierung, existiert eine Vielzahl teils deutlich
@@ -77,7 +79,7 @@ lässt sich in \hyperref[app:6]{A.6} betrachten.
 
 Die hingegen von der Farbe unabhängigen, entstehenden Formationen der
 Mandelbrot-Menge, die teilweise erst bei sehr kleinen Ausschnitten erkennbar sind,
-sind kartografiert und teilweise wegen einer gewissen Ähnlichkeit nach
+sind kartografiert und teilweise, wegen einer gewissen Ähnlichkeit, nach
 Objekten aus der realen Welt benannt.
 So bezeichnet man die größte kreisförmige Kardioide oder auch \glqq Knospe\grqq
 ~als \glqq K\"orper\grqq~(wobei dieser genauer unterteilt werden kann)
