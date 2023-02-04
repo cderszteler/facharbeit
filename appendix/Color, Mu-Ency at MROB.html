@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="GENERATOR" content="Rilybot AROS from RHTF">
+ <meta name="Author" content="Robert Munafo">
+ <meta name="format-detection" content="telephone=no">
+ <link rel="search" type="application/opensearchdescription+xml" title="mrob" href="/opensearch.xml">
+ <meta name="keywords" content="Color, Mandelbrot, set" />
+ <meta name="description" content="Color -- Explore a wide variety of topics from large numbers to sociology at mrob.com" />
+ <meta name="x-rhtf-glname" content="" />
+ <link rel="shortcut icon" href="/favicon.ico" />
+ <title>Color, Mu-Ency at MROB</title>
+ <link rel="stylesheet" href="../../style.css" />
+ <link rel="canonical" href="http://www.mrob.com/pub/muency/color.html">
+</head>
+
+<body >
+<div class="motd edtrl"><div class="mdbef0"></div><div class="mdbef1">mdbtxt1</div><div class="mdbef2">mdbtxt2</div><center><a href="#postmotd">Proceed to Safety</a></center></div><div class="mdspc edtrl"></div><a name="postmotd" class="edtrl"><div id="banner">
+<div id="topnav">
+<a href="../../pub/index.html">mrob</a>
+&#8195;
+<a href="../../pub/ries/index.html">RIES</a> <a href="../../pub/math/numbers.html">Numbers</a> <a href="../../pub/math/largenum.html">Largenum</a> <a href="../../pub/math/nu-sequences.html">Sequences</a> <a href="../../pub/muency.html">Mandelbrot</a>
+&#8195;
+<a href="../../pub/comp/xmorphia/index.html">Xmorphia</a>
+</div>
+  <div id="search">
+    <form action="https://www.google.com/search" style="display: inline; float:right">
+      <label for="q">Search:</label>
+      <input name="query" type="hidden" value="site:mrob.com" />
+      <input style="font-family:Palatino" name="q" id="q" size="15" value="" />
+      <input name="btnG" type="submit" value="Go" />
+    </form>
+  </div>
+</div>
+<div style="clear:both;"></div>
+<div id="content">
+<h1>Color&#8195;&#8195;</h1><p class="a">
+Robert P. Munafo, 2022 Dec 12.
+<br /><hr /><hr />
+</p>
+
+<p class="a">
+For the purpose of this discussion there are two types of color
+drawing situations.
+</p>
+
+<p class="a">
+"Limited color" refers to the situation where there is some rather
+small number <span class="i">N</span> of colors available (typically 256 or less) and you
+specify which color to use by giving a single number from 1 to <span class="i">N</span>.
+</p>
+
+<p class="a">
+"Full color" refers to the situation where you specify the color to
+use by giving three separate numbers, specifying the color in terms of
+some kind of three-dimensional color space (like red-green-blue, or
+hue-saturation-luminance)
+</p>
+
+<h2>Limited Color</h2>
+
+<p class="a">
+When working in limited color it is typical to pick a color from 1 to
+<span class="i">N</span> based on the number of <a href="escapeiterations.html">escape iterations</a> of the <a href="point.html">point</a>. If the
+number of iterations is less than <span class="i">N</span> it can be used directly. If it
+is bigger than <span class="i">N</span> you can pick a fixed "overflow" value, or use
+(iterations modulo N), which has the effect of cycling through the
+colors as many times as needed to cover all the possible iteration
+values.
+</p>
+
+<h2>Full Color</h2>
+
+<p class="a">
+The best approach when working in full color is to treat your
+available colors as a two-dimensional or three-dimensional space and
+plot each pixel with a color that combines different attributes of
+the iterated point, using dimensions in the color space. There are
+lots of possibilities; here are two examples:
+</p>
+
+<p class="a"><span class="b">Two dimensions of color, two attributes of point</span>
+</p>
+<p class="i">
+   use hue to show <a href="escapeiterations.html">Escape Iterations</a>
+</p>
+<p class="i">
+   use brightness to show <a href="distanceestimator.html">Distance Estimate</a>
+</p>
+
+<p class="a"><span class="b">Three dimensions of color, three attributes of point</span>
+</p>
+<p class="i">
+   use hue to show <a href="continuousdwell.html">Continuous Dwell</a>
+</p>
+<p class="i">
+   use saturation to show final point's <a href="angle.html">Angle</a> 
+</p>
+<p class="i">
+   use brightness to show final point's <a href="radius.html">Radius</a> 
+</p>
+
+<p class="a">
+Both of these will produce fairly stunning results and of course there
+are dozens of other possible combinations.
+</p>
+
+<p class="a">
+One of the best ways to color the Mandelbrot Set uses the
+<a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSV</a> color space. Use the <a href="distanceestimator.html">Distance Estimator</a> function
+for V. Use <a href="escapeiterations.html">Escape-Iterations</a> for H, with a somewhat different hue
+when the final point's <a href="angle.html">Angle</a> is between 0 and pi. Make S alternate
+between 1.0 and 0.67, to show odd and even values of
+<a href="escapeiterations.html">Escape-Iterations</a>. The result is stunning:
+</p>
+
+<p class="q">
+                </p><br /><p align="center"><img src="../../images/0-muency/r2f.14-29-DFA.jpg" width=320  height=320  alt="An HSV rendering" title="An HSV rendering" ><br /><i>An HSV rendering</i></p><br />
+<p align="center">        (as used in <a href="colormandelzoom.html">Color MANDELZOOM</a> and its successors) </p>
+<p class="a">
+
+It is much better to use the hue/saturation/brightness system rather
+than something like red/green/blue, because of the psychology and
+physiology of human vision. Most good graphics environments provide a
+function that converts from HSV to RGB; if your's doesn't, look it up
+in a book like Graphics Gems or Fundamentals of Interactive Computer
+Graphics.
+</p>
+
+<p class="a">
+For each dimension you want to translate the attribute to the
+dimension in such a way that you use the whole range, and use it
+evenly. For example, hue is expressed as an angle on the color wheel.
+To convert iterations to hue, I would recommend some sort of
+logarithmic function, so if it takes 20 iterations to go around the
+wheel the first time, it takes another 40 to go around the second
+time, then 80, then 160 and so on. Then, to preserve the appearance of
+stripes at all iterations, you could add 20 degrees to the angle if
+the iteration is odd. The resulting formula would look like this:
+</p>
+
+<span  class='f'>
+      hue  =  (360  *  log2(iterations))  modulo  360
+      if  (iterations  mod  2  =  1)
+          hue  =  (hue  +  20)  modulo  360
+</span>
+<p class="q">
+         </p><br /><p align="center"><img src="../../images/0-muency/r2f.14-29-D00.jpg" width=320  height=320  alt="Hue based on iterations" title="Hue based on iterations" ><br /><i>Hue based on iterations</i></p><br />
+<p class="a">
+
+</p><h2>Algorithm Used in the Mu-Ency Illustrations</h2>
+
+<p class="a">
+Most of the JPG and PNG images used to illustrate the Mu-Ency articles are
+colored using an algorithm similar to the following:
+</p>
+
+<span  class='f'>
+    using  a  fairly  large  <a href="escaperadius.html">escape radius</a>  (such  as  1000),
+    iterate  to  determine  <span class="i">D</span>  using  the  <a href="continuousdwell.html">continuous dwell</a>  method
+          <span class="i">(see  also  <a href="escapeiterations.html">escape-iterations</a>)</span>
+          set  <span class="i">dwell</span>  =  floor(D)
+          set  <span class="i">finalrad</span>  =  D  -  floor(D)
+          <span class="i">(The  <a href="floor.html">floor</a>  function  gives  the  integer  part  of  D)</span>
+
+&#8195;    compute  angle  of  final  coordinate  of  iteration  and  call  it  <span class="i">finalang</span>
+    (if  the  <a href="escaperadius.html">escape radius</a>  is  big  enough,  this  is  also  a  fractional  part
+    of  the  <a href="externalangle.html">external angle</a>)
+
+&#8195;    compute  <a href="distanceestimator.html">distance  estimate</a>
+          set  <span class="i">dscale</span>  =  <span class="k">log<sub>2</sub></span>(distance_estimate  /  pixel_spacing)
+
+&#8195;    if  <span class="i">dwell</span>  exceeds  iterations  limit,
+          skip  all  the  following  and  plot  a  white  point
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">Convert  the  scaled  distance  estimate  to  a  brightness  (called
+          "value"  in  the  HSV  color  space)  from  0.0  to  1.0  in  8  intervals.</span>
+
+&#8195;    if  <span class="i">dscale</span>  >  0
+          <span class="i">value</span>  =  1.0
+    else  if  <span class="i">dscale</span>  >  -8
+          <span class="i">value</span>  =  (8  +  <span class="i">dscale</span>)/8
+    else
+          <span class="i">value</span>  =  0
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">Apply  logarithmic  scaling  to  the  dwell.  The  big  number  "100000"
+          should  be  chosen  to  be  bigger  than  any  iterations  limit  you'll
+          ever  use.</span>
+    P  =  log(<span class="i">dwell</span>)/log(100000)
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">The  following  re-maps  the  range  0.0...1.0  onto  an  "angle"
+          and  "radius"  on  the  color  wheel.  This  color  wheel  has  white  in  the
+          center,  pastel  hues  close  to  the  center,  and  vivid  colors  around  the
+          edge  of  the  wheel.  In  order  to  gain  maximum  use  of  all  the  available
+          colors,  we  compute  an  angle  and  radius  in  a  way  that  places  the
+          resulting  points  equally  far  apart  from  one  another.  The  use
+          of  square  root  means  that  the  radius  increases  more  slowly  as  we
+          move  away  from  the  center.  Note  also  that  the  angle  will  be  multiplied
+          by  a  constant  below,  so  we'll  end  up  going  around  the  wheel  multiple
+          times.</span>
+
+&#8195;    if  (P  <  0.5)  {
+          P  =  1.0  -  1.5*P
+          <span class="i">angle</span>  =  1  -  P
+          <span class="i">radius</span>  =  <span class="k">sqrt</span>(P)
+    }  else  {
+          P  =  1.5*P  -  0.5
+          <span class="i">angle</span>  =  P
+          <span class="i">radius</span>  =  <span class="k">sqrt</span>(P)
+    }
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">The  following  makes  every  other  "stripe"  a  bit  lighter</span>
+    if  <span class="i">dwell</span>  is  odd  {
+          <span class="i">value</span>  =  0.85  *  <span class="i">value</span>
+          <span class="i">radius</span>  =  0.667  *  <span class="i">radius</span>
+    }
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">The  following  breaks  the  stripes  up  into  "squares"  that  make  the
+          <a href="externalangle.html">external angles</a>  evident.  Combined  with  the  previous  "stripe"
+          operation,  this  gives  the  image  a  checkerboard-like  appearance</span>
+    if  <span class="i">finalang</span>  >  &#960;  {
+          <span class="i">angle</span>  =  <span class="i">angle</span>  +  0.02
+    }
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">The  following  turns  each  "square"  into  a  rainbow-like  gradient</span>
+    <span class="i">angle</span>  =  <span class="i">angle</span>  +  0.0001  *  <span class="i">finalrad</span>
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">The  following  causes  it  to  use  10  full  rainbows  to  cover  the  range
+          from  1  to  100000  (or  whichever  big  number  was  used  in  the  first  step
+          of  calculating  P)</span>
+    <span class="i">hue</span>  =  <span class="i">angle</span>  *  10.0
+    <span class="i">hue</span>  =  <span class="i">hue</span>  -  <span class="k">floor</span>(<span class="i">hue</span>)
+
+&#8195;    <span class="i">saturation</span>  =  <span class="i">radius</span>  -  <span class="k">floor</span>(<span class="i">radius</span>)
+
+&#8195;    <span class="b">comment</span>
+          <span class="i">hue  is  now  in  the  range  0.0...1.0.  This  represents  a  full  circle
+          (normally  0...2&#960;)</span>
+
+&#8195;    convert  (<span class="i">hue</span>,  <span class="i">saturation</span>,  <span class="i">value</span>)  to  (<span class="i">red</span>,  <span class="i">green</span>,  <span class="i">blue</span>)
+    using  standard  <a href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSV</a>  to  RGB  mapping
+
+&#8195;</span>
+
+
+<p class="a">
+The intended benefits of this algorithm are:
+</p>
+
+<ul><li>Always show all of the detail in an image, with lots of contrast
+</ul>
+<ul><li>Always show the dwell bands and binary decomposition
+</ul>
+<ul><li>Does not vary with zooming in and out or with changing the
+    iterations (dwell) limit (in other words, an enlarged portion of
+    any image always matches a recomputed version of just that
+    portion)
+</ul>
+<ul><li>Use a color wheel that is rebalanced to match the human
+    psychovisual color primaries (which gives what I consider
+    aesthetically pleasing colors)
+</ul>
+<ul><li>Makes efficient use of the 3-D color space (for example by
+    compensating for less information-carrying ability at low
+    brightness values)
+</ul>
+<ul><li>Shows multiple hues, except when that would preclude any of the above
+</ul>
+<h2>More Examples</h2>
+
+<p class="q">
+ <table><tr><td width="20px"></td><td><table border="1" cellspacing="0" cellpadding="2" hspace="30px">
+<tr><td>
+       <img src="../../images/0-muency/r2f.14-29-00A.jpg" alt="" width=320  height=320   >         </td><td>       <img src="../../images/0-muency/r2f.14-29-0F0.jpg" alt="" width=320  height=320   >
+</td></tr><tr><td >
+    Showing external angle only       </td><td>      Showing filaments only
+</td></tr><tr><td >
+        <img src="../../images/0-muency/r2f.14-29-0FA.jpg" alt="" width=320  height=320   >        </td><td>      <img src="../../images/0-muency/r2f.14-29-D0A.jpg" alt="" width=320  height=320   >
+</td></tr><tr><td >
+ Showing filaments and external angle </td><td> Showing dwell and external angle
+</td></tr><tr><td >
+        <img src="../../images/0-muency/r2f.14-29-DF0.jpg" alt="" width=320  height=320   >        </td><td>
+</td></tr><tr><td >
+     Showing dwell and filaments      </td><td>
+ </td></tr></table></td></tr></table>
+</p>
+<p class="a">
+
+</p>
+
+<p class="a"><hr />
+</p>
+
+<p class="a">
+See also <a href="algorithms.html">algorithms</a>, <a href="dithering.html">dithering</a>, <a href="palette.html">palette</a>, <a href="representationfunction.html">representation functions</a>.
+</p>
+
+<p class="a"><hr />
+</p>
+
+<p class="a"><span class="s">revisions:
+20100907 oldest on record;
+20101213 fix a couple typos; add "intended benefits"
+20221212 Add illustrations
+</span>
+</p>
+<p class="a"><br /><hr /><hr />
+From the Mandelbrot Set Glossary and Encyclopedia, by Robert Munafo, (c) 1987-2022. &#8195; &#8195; <a href="../../pub/mu-index.html">Mu-ency index</a>
+
+</p><hr>
+<span class="footer">
+<span class="s">Robert Munafo's home pages on <a href="https://aws.amazon.com">AWS</a> &#8195;
+&copy; 1996-2022 Robert P. Munafo.</span>
+&#8195; <a href="../../pub/personal.html">about</a> &#8195; <a href="../../main-contact.html">contact</a>
+<br />
+<span class="s">This work is licensed under a Creative Commons
+Attribution-NonCommercial 4.0 International License.
+Details <a href="../../cc-license.html">here</a>.</span>
+</span>
+<br />
+<span class="s">This page was written in the "embarrassingly readable" markup language <a href="../../pub/rhtf/index.html">RHTF</a>, and was last updated on 2022 Dec 13.</span> <img src="../../images/symbols/rbot-16.png" alt=""  ><span style="font-size: small">s.27</span><br /></div>
+</body></html>
