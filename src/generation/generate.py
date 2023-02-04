@@ -40,8 +40,8 @@ def draw_and_save_plot(pixels, color_map, size):
 # 2000-5000
 RESOLUTION = 500
 # This value defines the image size. It should be updated accordingly with the
-# resolution
-IMAGE_SIZE = RESOLUTION * 1.25
+# resolution. An image size above 300 should often not be necessary.
+IMAGE_SIZE = min(RESOLUTION * 1.25, 300)
 # This value defines the scope/detail of the image. Default: [-2, 1, -1, 1]
 SCOPE = [-2, 1, -1, 1]
 # This value should be changed if the scope is not the default. Default: 100
@@ -53,19 +53,19 @@ COLOR_MAP = {
     'red': (
         (0.0, 0.09019607843137255, 0.09019607843137255),
         (0.4, 0.24313725490196078, 0.24313725490196078),
-        (0.8, 0.0, 0.0),
+        (0.6,  0.0, 0.0),
         (1.0, 0.0, 0.0)
     ),
     'green': (
         (0.0, 0.1411764705882353, 0.1411764705882353),
         (0.4, 0.6313725490196078, 0.6313725490196078),
-        (0.8, 0.8980392156862745, 0.8980392156862745),
+        (0.6, 0.8980392156862745, 0.8980392156862745),
         (1.0, 0.0, 0.0)
     ),
     'blue': (
         (0.0, 0.14901960784313725, 0.14901960784313725),
         (0.4, 0.6784313725490196, 0.6784313725490196),
-        (0.8, 0.8823529411764706, 0.8823529411764706),
+        (0.6, 0.8823529411764706, 0.8823529411764706),
         (1.0, 0.0, 0.0)
     )
 }

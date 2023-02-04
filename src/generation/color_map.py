@@ -39,3 +39,5 @@ custom = LinearSegmentedColormap('custom', segmentdata=custom_data)
 # figure, axis = plot.subplots()
 # figure.colorbar(mpl.ScalarMappable(norm=colors.Normalize(), cmap=custom), ax=axis)
 # figure.show()
+#
+# print(custom_data)
