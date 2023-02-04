@@ -3,8 +3,17 @@
   \addtocounter{figure}{-1}%
   \renewcommand{\thefigure}{#1}%
 }
+
 \noindent\textbf{A.1:}\label{app:1}
-\begin{equation}\tag{A.1}\label{eq:complex-numbers-multiplication}
+\begin{figure}[H]\figuretag{A.1}
+\centering
+\includegraphics[width=0.7\textwidth]{images/benoit-mandelbrot}
+\caption{Benoît Mandelbrot 1997 in Frankreich~\cite{gaillarde_benoit_1997}.}
+\label{fig:benoit-mandelbrot-picture}
+\end{figure}
+
+\noindent\textbf{A.2:}\label{app:2}
+\begin{equation}\tag{A.2}\label{eq:complex-numbers-multiplication}
   \begin{split}
     z_1 \cdot z_2 \\
     (a + bi) \cdot (c + di) \\
@@ -15,8 +24,8 @@
   \end{split}
 \end{equation}
 
-\noindent\textbf{A.2:}\label{app:2}
-\begin{equation}\tag{A.2}\label{eq:complex-numbes-squaring}
+\noindent\textbf{A.3:}\label{app:3}
+\begin{equation}\tag{A.3}\label{eq:complex-numbes-squaring}
   \begin{split}
     z_1^2
     = z_1 \cdot z_1 \\
@@ -26,14 +35,6 @@
     = a^2 - b^2 + 2abi
   \end{split}
 \end{equation}
-
-\noindent\textbf{A.3:}\label{app:3}
-\begin{figure}[H]\figuretag{A.3}
-  \centering
-  \includegraphics[width=0.7\textwidth]{images/benoit-mandelbrot}
-  \caption{Benoît Mandelbrot 1997 in Frankreich~\cite{gaillarde_benoit_1997}.}
-  \label{fig:benoit-mandelbrot-picture}
-\end{figure}
 
 \noindent\textbf{A.4:}\label{app:4}
 \begin{figure}[H]\figuretag{A.4}
@@ -64,13 +65,12 @@
 \end{figure}
 
 \noindent\textbf{A.5:}\label{app:5}
-\begin{figure}[H]\figuretag{A.5}
-  \centering
-  \includegraphics[width=0.7\textwidth]{images/bodyHeadMandelbrotSet}
-  \caption{
-    K\"orper (B) und Kopf (H) der Mandelbrot-Menge~\cite{mahanta_mandelbrot_2016}.
-  }
-  \label{fig:body-and-head-of-mandelbrot-set}
+\begin{figure}[H]\figuretag{A.5}\label{fig:first-print-mandelbrot-set}
+\centering
+\includegraphics[width=0.7\textwidth]{images/Mandel}
+\caption{
+  Darstellung der ersten Drucks der Mandelbrot-Menge~\cite{elphaba_command-line_2007}.
+}
 \end{figure}
 \newpage
 
@@ -124,10 +124,11 @@
 \end{figure}
 
 \noindent\textbf{A.7:}\label{app:7}
-\begin{figure}[H]\figuretag{A.7}\label{fig:first-print-mandelbrot-set}
+\begin{figure}[H]\figuretag{A.7}
 \centering
-\includegraphics[width=0.7\textwidth]{images/Mandel}
+\includegraphics[width=0.7\textwidth]{images/bodyHeadMandelbrotSet}
 \caption{
-  Darstellung der ersten Drucks der Mandelbrot-Menge~\cite{elphaba_command-line_2007}.
+  K\"orper (B) und Kopf (H) der Mandelbrot-Menge~\cite{mahanta_mandelbrot_2016}.
 }
+\label{fig:body-and-head-of-mandelbrot-set}
 \end{figure}
