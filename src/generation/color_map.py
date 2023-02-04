@@ -5,6 +5,12 @@ import numpy as np
 def code_channel(channel):
     return np.interp(x=channel,xp=[0,255],fp=[0,1])
 
+# Used values:
+# 1. RGB(23, 36, 38)
+# 2. RGB(62, 161, 173)
+# 3. RGB(0, 229, 255)
+# 4. RGB(0, 0, 0)
+
 
 custom_data = {
     'red': (
