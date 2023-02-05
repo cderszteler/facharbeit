@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plot
 import numpy
-from generation.color_map import custom
 
 
 def divergent_iterations(real, imaginary, max_iterations):
@@ -71,6 +70,6 @@ COLOR_MAP = {
 
 
 pixels = generate_pixel_iterations_map(RESOLUTION, MAX_ITERATIONS)
-draw_plot(pixels, custom, IMAGE_SIZE)
+draw_plot(pixels, COLOR_MAP, IMAGE_SIZE)
 plot.show()
 
