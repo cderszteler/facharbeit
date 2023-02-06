@@ -1,5 +1,4 @@
 \newsection{Anhang}{appendix}
-\pagenumbering{gobble}
 \newcommand{\figuretag}[1]{%
   \addtocounter{figure}{-1}%
   \renewcommand{\thefigure}{#1}%
@@ -136,7 +135,7 @@
 
 \noindent\textbf{A.8:}\label{app:8}
 \vspace*{-2ex}
-\begin{figure}[H]\figuretag{A.8}\label{fig:mandelbrot-set-max-border-1}
+\begin{figure}[H]\figuretag{A.8}
 \centering
 \begin{minipage}[t]{0.48\textwidth}
   \centering
@@ -172,10 +171,11 @@
   \caption{Generiertes Bild mit einer Iterationsgrenze von $4$}
   \label{app:8.4}
 \end{minipage}
+\label{fig:mandelbrot-set-max-border-1}
 \end{figure}
 \newpage
 
-\begin{figure}[H]\figuretag{A.8}\label{fig:mandelbrot-set-max-border-2}
+\begin{figure}[H]\figuretag{A.8}
 \centering
 \begin{minipage}[t]{0.48\textwidth}
   \centering
@@ -202,6 +202,36 @@
   \caption{Generiertes Bild mit einer Iterationsgrenze von $20$}
   \label{app:8.7}
 \end{minipage}
+\label{fig:mandelbrot-set-max-border-2}
+\end{figure}
+
+\noindent\textbf{A.9:}\label{app:9}
+\begin{figure}[H]\figuretag{A.9}
+\centering
+\begin{minipage}[t]{0.30\textwidth}
+  \centering
+  \includegraphics[width=0.5cm, height=3cm]{images/simple_color_map}
+  \figuretag{A.9.1}
+  \caption{Simple HSV-Colormap mit einem linearen Farbverlauf}
+  \label{app:9.1}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+ \centering
+ \includegraphics[width=0.5cm, height=3cm]{images/used_color_map}
+ \figuretag{A.9.2}
+ \caption{Komplexe HSV-Colormap mit vier verschiedenen Ankerpunkten}
+ \label{app:9-2}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.30\textwidth}
+ \centering
+ \includegraphics[width=0.5cm, height=3cm]{images/complex_color_map}
+ \figuretag{A.9.3}
+ \caption{Komplexe HSV-Colormap mit vielen unterschiedlichen Ankerpunkten}
+ \label{app:9.3}
+\end{minipage}
+\label{fig:color-maps}
 \end{figure}
 
 % TODO: Replace with last number
@@ -217,6 +247,7 @@
   commentstyle=\color{mygreen},
   keywordstyle=\color{blue},
   stringstyle=\color{mymauve},
+  % TODO: Update caption tag
   caption={[Caption for LOF]
     Python-Code zur Generierung der \hyperref[fig:mandelbrot-set]{
       Abbildung \ref{fig:mandelbrot-set}

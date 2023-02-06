@@ -19,6 +19,7 @@
 \usepackage[german]{babel}
 \usepackage{blindtext}
 \usepackage{float}
+\interfootnotelinepenalty=100000
 
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
@@ -28,7 +29,7 @@
 
 \usepackage[
   citestyle=alphabetic,
-  bibstyle=alphabetic,
+  bibstyle=alphabetic
 ]{biblatex}
 \DeclareCiteCommand{\footcite}[\mkbibfootnote]
 {\usebibmacro{prenote}}
@@ -40,6 +41,7 @@
 
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{gensymb}
 \usepackage{siunitx}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -92,11 +94,9 @@
 
   \include{sections/priorKnowledge/priorKnowledge}
   \include{sections/theoreticalFoundation/theoreticalFoundation}
-  \include{sections/practicaConsideration/practicaConsideration}
+  \include{sections/practicalConsideration/practicalConsideration}
 
-  % TODO: Implement
-  % \newsection{Fazit}{conclusion}
-  % \newpage
+  \include{sections/conclusion}
 
   \newsection{Literatur und Quellen}{literature-and-sources}
   \nocite{heinrich_boll_gymnasium_troisdorf_hbg_nodate}
