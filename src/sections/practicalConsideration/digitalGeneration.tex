@@ -2,17 +2,17 @@
 
 Im Folgenden werden informationstechnische Aspekte hinsichtlich der Bildgenerierung
 der Mandelbrot-Menge untersucht.
-Dafür wird zunächst die Funktionsweise als auch die im Vergleich zur Mathematik
-entstehenden Probleme erläutert.
+Dafür wird zunächst die Funktionsweise als auch die dabei durch die Unterschiede
+zur reinen Mathematik entstehenden Probleme erläutert.
 Im Anschluss werden verschiedene Herangehensweisen und Algorithmen zur Farbkodierung
-grob skizziert.
+exemplarisch skizziert.
 
 \subsubsection{Korrelation zwischen Informationstechnik und Mathematik}
 \label{subsubsec:correlation-between-it-and-mathematics}
 
 Die im letzten Kapitel vorgestellte und analysierte \hyperref[fig:mandelbrot-set]
 {Abbildung \ref{fig:mandelbrot-set}} wurde,
-wie es in der Beschriftung steht, mit dem Code aus \hyperref[app:10]{[A.10]}
+wie in der Beschriftung beschrieben, mit dem Code aus \hyperref[app:10]{A.10}
 generiert.
 Im Vergleich zu den theoretischen Überlegungen, ist die
 informationstechnische Herangehensweise dabei sehr ähnlich:
@@ -21,13 +21,13 @@ Grundlegend wird jeder Pixel mit seiner $x$- und $y$-Koordinate des zu generiere
 Ausschnitts einer komplexen Zahl zugeordnet.
 Dabei entspricht (in der regulären Darstellung) die $x$-Koordinate dem Realteil
 $a$ und die $y$-Koordinate dem Imagin\"arteil $b$, sodass eine komplexe Zahl
-$c = a + bi$ in einem Pixel $P \text{ durch } x = a \text{ und } y = b$ ausgedrückt
+$z = a + bi$ in einem Pixel $P \text{ durch } x = a \text{ und } y = b$ ausgedrückt
 werden kann.
 
 Das naheliegendste und offensichtlichste Problem,
 neben vielen rein informationstechnischen Optimierungsaufgaben,
 ergibt sich bei der Berechnung, ob es sich beim jeweiligen Pixel
-beziehungsweise bei der jeweiligen komplexen Zahl, um ein Element aus
+beziehungsweise dem jeweiligen $c$, um ein Element aus
 $\mathbb{M}$ handelt.
 Denn im Gegensatz zu der mathematischen Betrachtung, die die Iterationsanzahl
 $n$ bei $f^n(z)$ gegen unendlich laufen lässt, ist dies in der konkreten Umsetzung
@@ -50,7 +50,7 @@ Um die in der \hyperref[subsubsec:color-meaning]{Sektion \ref{subsubsec:color-me
 erklärten Farben zu kodieren, eignet sich zunächst das HSV (Hue, Saturation, Value)
 Farbmodel, womit sich mithilfe von prozentualen Werten eine
 Farbveränderung hinsichtlich der Helligkeit als auch der Farbsättigung erzielen lässt.
-Dies wird anhand der benötigten Iterationen $n$ und der Iterationsgrenze $m$
+Dies wird anhand des Verhältnisses der benötigten Iterationen $n$ zu der Iterationsgrenze $m$
 für jeden komplexen Wert $c \text{ aus } \mathbb{M}$
 berechnet \cite{robert_p_color_2022}.
 Als Beispiel sei Hue mit $186\degree$ und Vue mit $100\%$ gegeben, woraus
@@ -70,7 +70,7 @@ Für ein jeweiliges $c$ wird mithilfe solcher Farbpaletten eine Farbe erneut anh
 dessen Verhältnis von benötigten Iterationen $n$ zu der Iterantionsgrenze $m$
 ermittelt, dabei existieren jedoch bereits alle vorkommenden Farben, was somit
 die Berechnung des aufwendigeren Farbgenerierungsprozesses\footnote{
-  Also die Auswahl und korrekte Zusammenstellung der Farben einer Farbpalette
+  Also die Auswahl und korrekte Zusammenstellung der Farben einer Farbpalette.
 }
 von dem Berechnungsprozess der eigentlichen Mandelbrot-Menge entkoppelt.
 In \hyperref[app:9.2]{\ref{app:9.2}} ist die für alle für die Arbeit generierten
@@ -79,7 +79,7 @@ dargestellten Palette mehr als zwei (insgesamt 4) Ankerpunkte\footnote{
   Hier: Eindeutige HSV-Farben, die in gewissen Abständen auf einer Palette
   platziert werden können und zwischen denen ein Gradient ensteht.
 } besitzt, wobei diese, im Gegensatz zu einer komplexen\footnote{
-  Eine Farbpalette mit vielen Ankerpunkten
+  Eine Farbpalette mit vielen Ankerpunkten.
 } Colormap \hyperref[app:9.3]{[z.B. \ref{app:9.3}]},
 mit der man visuell anschaulichere Bilder generieren kann,
 weiterhin recht minimal ist.

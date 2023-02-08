@@ -26,7 +26,7 @@ Die zu sehenden, schwarz gefärbten Pixel repräsentieren einen
 jeweiligen Wert für $c$, der sich in der Mandelbrot-Menge befindet.
 Auffällig ist bei erster Betrachtung, dass sich neben der großen,
 einheitlichen Struktur in der Mitte,
-deutlich kleinere, ähnlich aussende Formationen um den eigentlichen Hauptkörper
+deutlich kleinere, ähnlich aussende Formationen um den eigentlichen Hauptkörper,
 dem Apfelm\"anchen, zum Beispiel im negativen Teil der reellen Achse,
 erkennen lassen.
 Diese werden Satelliten genannt und existieren aufgrund der Selbstähnlichkeit
@@ -42,8 +42,8 @@ kleine Satelliten als Druckfehler gewertet wurden\footnote{
   die Benoît Mandelbrot in den 1970er bei IBM anstellte, war das Drucken deutlich
   mühseliger und aufwendiger, als es heutzutage ist.
   Deshalb existierte ein ganzes Abteil nur für die Herstellung und Bearbeitung von
-  Drucks, die - da es damals häufig vorkam - kleine Satelliten am Rande der ersten
-  Darstellungen \hyperref[app:5]{[A.5]} gutgemeint wegretuschierten.
+  Drucks, die - da ähnliche Druckfehker damals häufig vorkam - kleine Satelliten
+  am Rande der ersten Darstellungen \hyperref[app:5]{[A.5]} gutgemeint wegretuschierten.
   Die ersten Bilder, die Herr Mandelbrot also erhielt, verwunderten ihn sehr und
   er war äußerst aufgebracht, als er von der tolpatschigen Wahrheit erfur
   \cite{numberphile_whats_2019}.
@@ -62,13 +62,16 @@ Iterationen hat es benötigt, um $c$ aus $\mathbb{M}$ auszuschließen\footnote{
   \hyperref[tab:iterations-example]{Tabelle~\ref{tab:iterations-example}}.
   $c_1$ ließ sich nach der 3. Iteration aus der Mandelbrot-Menge ausschließen,
   hingegen war dies bei $c_3$ erst nach der 5. Iteration der Fall.
+  Schwarze markierte Werte repräsentieren jedoch weiterhin Zahlenwerte
+  für $c \in \mathbb{M}$.
 }.
 Deshalb existiert ein hell erscheinender Rand um die schwarzen Formationen,
-da es für diese Werte außerhalb von $\mathbb{M}$, die sehr nah an tatsächlichen
-Werten für $\mathbb{M}$ sind, es viele Iterationen benötigt, um diese auszuschließen.
+da es für diese Werte, die zwar außerhalb von $\mathbb{M}$ liegen, aber sehr nah
+an tatsächlichen Werten für $\mathbb{M}$ sind,
+es viele Iterationen benötigt, um diese auszuschließen.
 
 Neben dieser einen, verhältnismäßig simplen und dementsprechend auf den ersten
-Blick aussagekräftigeren Farbkodierung, existiert eine Vielzahl teils deutlich
+Blick aussagekräftigeren Farbkodierung, existiert eine Vielzahl an teils deutlich
 umfangreicheren Algorithmen, mit denen sich jedoch eine auf das menschliche Auge
 ansprechendere Farbgestaltung erzielen lässt.
 Diese werden in der \hyperref[subsubsec:color-coding]{Sektion \ref{subsubsec:color-coding}}
