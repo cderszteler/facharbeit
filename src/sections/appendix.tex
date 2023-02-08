@@ -1,4 +1,5 @@
 \newsection{Anhang}{appendix}
+\pagestyle{appendix}
 \newcommand{\figuretag}[1]{%
   \addtocounter{figure}{-1}%
   \renewcommand{\thefigure}{#1}%
@@ -234,8 +235,7 @@
 \label{fig:color-maps}
 \end{figure}
 
-% TODO: Replace with last number
-\noindent\textbf{A.Last:}\label{app:last}
+\noindent\textbf{A.10:}\label{app:10}
 \vspace*{1em}
 \lstinputlisting[
   language=Python,
@@ -247,10 +247,13 @@
   commentstyle=\color{mygreen},
   keywordstyle=\color{blue},
   stringstyle=\color{mymauve},
-  % TODO: Update caption tag
   caption={[Caption for LOF]
-    Python-Code zur Generierung der \hyperref[fig:mandelbrot-set]{
+    Python-Code zur Generierung der\hyperref[fig:mandelbrot-set]{
       Abbildung \ref{fig:mandelbrot-set}
     }
   }
 ]{sections/theoreticalFoundation/generate.py}
+
+\vfill
+\centering
+\noindent\textbf{Weitere Anhänge und benutzte Webseiten:}
