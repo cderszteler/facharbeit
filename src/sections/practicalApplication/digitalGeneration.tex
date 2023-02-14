@@ -5,36 +5,34 @@ hinsichtlich der Bildgenerierung der Mandelbrot-Menge untersucht.
 Dafür wird zunächst die Funktionsweise als auch die dabei durch die Unterschiede
 zur reinen Mathematik entstehenden Probleme erläutert.
 Im Anschluss werden verschiedene Herangehensweisen und Algorithmen zur Farbkodierung
-exemplarisch skizziert.
+exemplarisch vorgestellt.
 
 \subsubsection{Korrelation zwischen Informationstechnik und Mathematik}
 \label{subsubsec:correlation-between-it-and-mathematics}
 
-Die im letzten Kapitel vorgestellte und analysierte \hyperref[fig:mandelbrot-set]
+Die im letzten Kapitel analysierte \hyperref[fig:mandelbrot-set]
 {Abbildung \ref{fig:mandelbrot-set}} wurde,
 wie in der Beschriftung beschrieben, mit dem Code aus \hyperref[app:10]{A.10}
 generiert.
-Im Vergleich zu den theoretischen Überlegungen, ist die
+Im Vergleich zu den mathematischen Überlegungen, ist die
 informationstechnische Herangehensweise dabei sehr ähnlich:
 
 Grundlegend wird jeder Pixel mit seiner $x$- und $y$-Koordinate des zu generierenden
 Ausschnitts einer komplexen Zahl zugeordnet.
 Dabei entspricht (in der regulären Darstellung) die $x$-Koordinate dem Realteil
-$a$ und die $y$-Koordinate dem Imagin\"arteil $b$, sodass eine komplexe Zahl
+$a$ und die $y$-Koordinate dem Imaginärteil $b$, sodass eine komplexe Zahl
 $z = a + bi$ in einem Pixel $P \text{ durch } x = a \text{ und } y = b$ ausgedrückt
 werden kann.
 
-Das naheliegendste und offensichtlichste Problem,
-neben vielen rein informationstechnischen Optimierungsaufgaben,
-ergibt sich bei der Berechnung, ob es sich beim jeweiligen Pixel
-beziehungsweise dem jeweiligen $c$, um ein Element aus
+Das naheliegendste Problem, neben vielen ausschließlich informationstechnischen
+Optimierungsaufgaben, ergibt sich bei der Berechnung, ob es sich beim jeweiligen Pixel
+beziehungsweise dem jeweiligen $c$, um ein Element in
 $\mathbb{M}$ handelt.
-Denn im Gegensatz zu der mathematischen Betrachtung, die die Iterationsanzahl
-$n$ bei $f^n(z)$ gegen unendlich laufen lässt, ist dies in der konkreten Umsetzung
-nicht möglich.
-Deshalb setzt man einen Grenzwert an Iterationsdurchläufen, ab dem, sofern der zu
-überprüfende Wert für $c$ noch nicht aus der Mandelbrot-Menge ausgeschlossen wurde,
-dieser als Element von $\mathbb{M}$ angenommen wird.
+Denn im Gegensatz zu der mathematischen Betrachtung, ist es in der konkreten Umsetzung
+nicht möglich, die Iterationsanzahl $n$ bei $f^n(z)$ gegen unendlich laufen zu lassen.
+Deshalb setzt man einen Grenzwert $m$ an Iterationsdurchläufen, ab dem,
+sofern das zu überprüfende $c$ noch nicht aus der Mandelbrot-Menge
+ausgeschlossen wurde, dieses als Element von $\mathbb{M}$ angenommen wird.
 
 Folglich bestimmt dieser Wert indirekt die Auflösung beziehungsweise Genauigkeit
 des zu generierenden Bilds und muss deshalb bei kleineren Ausschnitten besonders
@@ -51,7 +49,7 @@ erklärten Farben zu kodieren, eignet sich zunächst das HSV (Hue, Saturation, V
 Farbmodel, womit sich mithilfe von prozentualen Werten eine
 Farbveränderung hinsichtlich der Helligkeit als auch der Farbsättigung erzielen lässt.
 Dies wird anhand des Verhältnisses der benötigten Iterationen $n$ zu der Iterationsgrenze $m$
-für jeden komplexen Wert $c \text{ aus } \mathbb{M}$
+für jeden zu überprüfenden, komplexen Wert $c \text{ für } \mathbb{M}$
 berechnet \cite{robert_p_color_2022}.
 Als Beispiel sei Hue mit $186\degree$ und Vue mit $100\%$ gegeben, woraus
 sich für jedes $c$ folgendes HSV ergibt:
@@ -60,14 +58,14 @@ $ HSV(186\degree, \frac{n}{m} \cdot 100\%, 100\%)$.
 Diese Farbkodierung ist aufgrund ihrer Simplizität in ihrer beschriebenen
 Form direkt informationstechnisch umsetzbar, jedoch eignet sich solch eine
 Herangehensweise aus Performance- beziehungsweise Optimierungsgründen nicht
-für jede berechnete komplexe Zahl $c$, wenn es sich bei der
+für jede zu überprüfende, komplexe Zahl $c$, wenn es sich bei der
 Farbzusammenstellung um einen komplexeren Zusammenhang wie in den Elementen
 der Bildergalerie \hyperref[app:6]{A.6} handelt.
 Um dieses Problem zu lösen, erstellt man sogenannte Colormaps
 (engl.: Farbpaletten), wie zum Beispiel \hyperref[app:9.1]{\ref{app:9.1}}
 aus den Werten des oberen Beispiels.
 Für ein jeweiliges $c$ wird mithilfe solcher Farbpaletten eine Farbe erneut anhand
-dessen Verhältnis von benötigten Iterationen $n$ zu der Iterantionsgrenze $m$
+dessen Verhältnisses von benötigten Iterationen $n$ zu der Iterantionsgrenze $m$
 ermittelt, dabei existieren jedoch bereits alle vorkommenden Farben, was somit
 die Berechnung des aufwendigeren Farbgenerierungsprozesses\footnote{
   Also die Auswahl und korrekte Zusammenstellung der Farben einer Farbpalette.
@@ -77,7 +75,7 @@ In \hyperref[app:9.2]{\ref{app:9.2}} ist die für alle für die Arbeit generiert
 Abbildungen benutzte Colormap zu sehen, die im Vergleich zur vorherigen
 dargestellten Palette mehr als zwei (insgesamt 4) Ankerpunkte\footnote{
   Hier: Eindeutige HSV-Farben, die in gewissen Abständen auf einer Palette
-  platziert werden können und zwischen denen ein Gradient ensteht.
+  platziert werden und zwischen denen ein Gradient ensteht.
 } besitzt, wobei diese, im Gegensatz zu einer komplexen\footnote{
   Eine Farbpalette mit vielen Ankerpunkten.
 } Colormap \hyperref[app:9.3]{[z.B. \ref{app:9.3}]},

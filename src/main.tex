@@ -7,6 +7,10 @@
 \author{Christoph Derszteler}
 
 % Packages
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
 \usepackage[
   left=4cm,
   right=3cm,
@@ -14,9 +18,6 @@
   bottom=3cm
 ]{geometry}
 \usepackage[bottom]{footmisc}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[german]{babel}
 \usepackage{blindtext}
 \usepackage{float}
 \interfootnotelinepenalty=100000
@@ -51,7 +52,8 @@
 \sisetup{
   group-separator = {,},
   input-decimal-markers={,},
-  output-decimal-marker = {,}
+  output-decimal-marker = {,},
+  exponent-product={\ensuremath{\cdot}}
 }
 
 \counterwithin*{equation}{section}

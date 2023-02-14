@@ -2,9 +2,9 @@
 
 Unter den komplexen Zahlen $\mathbb{C}$ versteht man die nächst größere Zahlenmenge
 nach den reellen Zahlen $\mathbb{R}$,
-die zus\"atzlich zu einem Realteil auch einen sogenannten Imagin\"arteil besitzen.
+die zusätzlich zu einem Realteil auch einen sogenannten Imaginärteil besitzen.
 Sie werden im weiteren Verlauf in der kartesischen Form
-$z = a + bi$ dargestellt, wobei $a$ der Realteil und $bi$ der Imagin\"arteil ist.
+$z = a + bi$ dargestellt, wobei $a$ der Realteil und $bi$ der Imaginärteil ist.
 Der Buchstabe $i$ steht hierbei für die imaginäre Einheit und
 ist definiert durch die Gleichung $i^2 = -1$.
 
@@ -17,17 +17,17 @@ Im Folgenden werden zwei dieser unterschiedlich funktionierenden
 Operationen vorgestellt:
 
 Zur Addition zwei komplexer Zahlen addiert man den
-Realteil und den Imagin\"arteil getrennt voneinander und fügt diesen
+Realteil und den Imaginärteil getrennt voneinander und fügt diesen
 danach wieder zusammen~\cite[S. 2]{lichtenegger_komplexe_2002}:
 $(a_1 + {b_1}i) + (a_2 + {b_2}i) = a_1 + a_2 + (b_1 + b_2)i$.
 
 Um komplexe Zahlen zu multiplizieren, wendet man das Distributivgesetz an,
 indem man den zweiten Faktor ebenfalls in seinen Realteil und seinen
-Imagin\"arteil unterteilt und diese jeweils einzeln mit dem ersten Faktor multipliziert
+Imaginärteil unterteilt und diese jeweils einzeln mit dem ersten Faktor multipliziert
 \cite[S. 2f.]{lichtenegger_komplexe_2002}.
 Die zwei entstehenden Produkte lassen sich dann wie oben beschrieben addieren.
-Bei der Multiplikation mit dem Imagin\"arteil multipliziert man unter anderem
-zwei imagin\"are Elemente miteinander.
+Bei der Multiplikation mit dem Imaginärteil multipliziert man unter anderem
+zwei imaginäre Elemente miteinander.
 Da $i^2 = -1$ gilt, entsteht durch diese Multiplikation
 ein negatives, aber reales Produkt.
 Wie in \hyperref[app:2]{A.2} gezeigt, gilt somit:
@@ -36,7 +36,7 @@ $ (a + bi)(c + di) = ac - bd + (bc + ad)i $
 Das in der Mandelbrot-Menge häufig angewandte Quadrieren von komplexen Zahlen,
 lässt sich mit der kartesischen Form ebenfalls herleiten \hyperref[app:3]{[A.3]}.
 Für eine gegeben, zu quadrierende, komplexe Zahl $a + bi$ gilt somit:
-$(a + bi)^2 = a^2 - b^2 + 2abi$
+$(a + bi)^2 = a^2 - b^2 + 2abi$.
 
 
 Ein illustriertes Beispiel soll beide Rechenoperationen veranschaulichen:
@@ -62,20 +62,19 @@ Ein illustriertes Beispiel soll beide Rechenoperationen veranschaulichen:
 
 \subsubsection{Graphische Darstellung komplexer Zahlen}
 
-Komplexe Zahlen können wie auch Zahlen anderer Zahlenmengen grafisch
+Komplexe Zahlen können wie Zahlen anderer Zahlenmengen grafisch
 dargestellt werden.
 Da komplexe Zahlen sowohl aus einem Realteil als auch aus
-einem Imagin\"arteil bestehen, reicht eine Achse nicht aus, um diese darzustellen;
+einem Imaginärteil bestehen, reicht eine Achse nicht aus, um diese darzustellen;
 stattdessen braucht man eine Ebene\footnote{
   Ebenfalls unter komplexer Zahlenebene und gaußsche Zahlenebene zu finden.
 }.
 Diese komplexe Zahlenebene teilt den Realteil auf die waagerechte Achse und
-den Imagin\"arteil auf die horizontale Achse auf.
+den Imaginärteil auf die horizontale Achse auf.
 Eine komplexe Zahl $z = a + bi$ besitzt somit die Koordinaten $ P(a|b)$.
 
-
-Eine komplexe Zahl lässt sich wie eine reelle Zahl absolut betrachten, wobei
-dieser absolute Wert ebenfalls als einen Abstand zum Ursprung zu betrachten ist
+Zusätzlich lässt sich eine komplexe Zahl wie eine reelle Zahl absolut betrachten,
+wobei dieser absolute Wert ebenfalls als der Abstand zum Ursprung zu betrachten ist
 \cite[S. 3]{lichtenegger_komplexe_2002}.
 Aufgrund dessen, dass eine komplexe Zahl aus zwei Komponenten besteht, lässt sich
 der Abstand über den Satz des Pythagoras berechnen:
@@ -99,6 +98,7 @@ der Abstand über den Satz des Pythagoras berechnen:
       \node at (1,0.25) {$ a $};
       \node at (2.25,1.5) {$ b $};
       \node at (0.70,1.5) {$ |z| $};
+      \draw [line width=0.4pt] (1.75, 0)|-(2, 0.25);
 
       \draw [fill=black] (2,3) circle(0.05);
       \draw [fill=black] (-3.4, -1.75) circle(0.05);
