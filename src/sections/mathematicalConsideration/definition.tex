@@ -1,6 +1,6 @@
 \subsection{Definition}\label{subsec:definition}
 
-Die Mandelbrot-Menge wird mit der bereits im vorherigen Kapitel vorgestellen,
+Die Mandelbrot-Menge $\mathbb{M}$ wird mit der bereits im vorherigen Kapitel vorgestellen,
 komplexen Iteration $z_{n+1} = z_n^2 + c \text{ mit } z_0 = 0$ und einem variablen
 Wert für $c$~\cite*[S.477ff.]{weitz_konkrete_2018} definiert.
 Dabei enthält die Menge alle komplexen Werte für $c$, mit denen die
@@ -12,7 +12,7 @@ Mathematisch ist die Menge iterativ wie folgt definiert:
   \quad
   \text{mit}
   \quad
-  f_c(z) = z^2 + c;\, z,c \in \mathbb{C}
+  f_c(z) = z^2 + c;\, z \in \mathbb{C}
 \end{equation}
 
 Wie in der Definition zu sehen, wird der Funktionswert der
@@ -27,9 +27,10 @@ Obwohl der gesamte Beweis dessen über den Rahmen dieser Arbeit hinausginge,
 so soll dennoch angemerkt werden, dass mithilfe der Dreiecksungleichung und
 vollständiger Induktion unter der Vorausnahme von $|z_n| > 2 \text{ und } |z_n| > |c|$
 folgende Ungleichung, die eine divergente Entwicklung repräsentiert,
-$\frac{|z_{n+11}|}{|z_n|} > 1$ bewiesen werden kann~\cite{munafo_escape_1997},
+$\frac{|z_{n+1}|}{|z_n|} > 1$ bewiesen werden kann~\cite{munafo_escape_1997},
 wobei sich zusätzlich zeigen lässt, dass für alle Werte von $|c| > 2$
 nach spätestens 2 Iterationen gilt: $z_2 = |c^2 + c| \geqslant |c|^2 - |c| > 2$.
 
 Es befinden sich deshalb alle Werte für $c$ als auch somit die grafische Darstellung
-der Mandelbrot-Menge in einem Einheitskreis mit dem Radius 2 [Vgl. \hyperref[app:4]{A.4}].
+der Mandelbrot-Menge in einem Kreis, dessen Mittelpunkt im Ursprung liegt,
+mit dem Radius 2 [Vgl. \hyperref[app:4]{A.4}].
