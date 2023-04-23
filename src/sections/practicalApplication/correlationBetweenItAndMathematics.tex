@@ -1,0 +1,34 @@
+\subsection{Korrelation zwischen Informationstechnik und Mathematik}
+\label{subsec:correlation-between-it-and-mathematics}
+
+Die im letzten Kapitel analysierte \hyperref[fig:mandelbrot-set]
+{Abbildung \ref{fig:mandelbrot-set}} wurde,
+wie in der Beschriftung beschrieben, mit dem Code aus \hyperref[app:10]{A.10}
+generiert.
+Im Vergleich zu den mathematischen Überlegungen ist die
+informationstechnische Herangehensweise dabei sehr ähnlich:
+
+Grundlegend wird jeder Pixel mit seiner $x$- und $y$-Koordinate des zu generierenden
+Ausschnitts einer komplexen Zahl zugeordnet.
+Dabei entspricht (in der regulären Darstellung) die $x$-Koordinate dem Realteil
+$a$ und die $y$-Koordinate dem Imaginärteil $b$, sodass eine komplexe Zahl
+$z = a + bi$ in einem Pixel $P \text{ durch } x = a \text{ und } y = b$ ausgedrückt
+werden kann.
+
+Das naheliegendste Problem, neben vielen ausschließlich informationstechnischen
+Optimierungsaufgaben, ergibt sich bei der Berechnung, ob es sich beim jeweiligen Pixel
+beziehungsweise dem jeweiligen $c$, um ein Element in
+$\mathbb{M}$ handelt.
+Denn im Gegensatz zu der mathematischen Betrachtung ist es in der konkreten Umsetzung
+nicht möglich, die Iterationsanzahl $n$ bei $f^n(z)$ gegen Unendlich konvergieren zu lassen.
+Deshalb setzt man einen Grenzwert $m$ an Iterationsdurchläufen, ab dem,
+sofern das zu überprüfende $c$ noch nicht aus der Mandelbrot-Menge
+ausgeschlossen wurde, dieses als Element von $\mathbb{M}$ angenommen wird.
+
+Folglich bestimmt dieser Wert indirekt die Auflösung beziehungsweise Genauigkeit
+des zu generierenden Bilds und muss deshalb bei kleineren Ausschnitten besonders
+hoch sein, da dabei ein Unterschied zwischen komplexen Zahlen ausgemacht werden
+muss, dessen Werte sich lediglich um geringe Nachkommastellen unterscheiden.
+Die Auswirkungen dieser Iterationsgrenze sind durch die Bildergalerie
+\hyperref[app:8]{A.8}, die generierte Bilder der Mandelbrot-Menge
+mit unterschiedlich (niedrigen) Grenzen darstellt, anschaulich visualisiert.
