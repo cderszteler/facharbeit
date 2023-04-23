@@ -2,10 +2,11 @@
 
 Um die in der \hyperref[subsubsec:color-meaning]{Sektion \ref{subsubsec:color-meaning}}
 erklärten Farben zu kodieren, eignet sich zunächst das HSV (Hue, Saturation, Value)
-Farbmodel, womit sich mithilfe von prozentualen Werten eine
-Farbveränderung hinsichtlich sowohl der Helligkeit
-als auch der Farbsättigung erzielen lässt.
-Dies wird anhand des Verhältnisses der benötigten Iterationen $n$ zu der Iterationsgrenze $m$
+Farbmodel, womit sich grundlegend mithilfe von prozentualen Werten Farben,
+vor allem jedoch Farbveränderungen hinsichtlich sowohl der Helligkeit
+als auch der Farbsättigung, erzielen lassen.
+Die jeweilige Farbe wird anhand des Verhältnisses
+der benötigten Iterationen $n$ zu der Iterationsgrenze $m$
 für jeden zu überprüfenden komplexen Wert $c \text{ für } \mathbb{M}$
 berechnet \cite{robert_p_color_2022}.
 Als Beispiel sei Hue mit $186\degree$ und Value mit $100\%$ gegeben, woraus
@@ -15,7 +16,7 @@ $ HSV(186\degree, \frac{n}{m} \cdot 100\%, 100\%)$.
 Diese Farbkodierung ist aufgrund ihrer Simplizität in ihrer beschriebenen
 Form direkt informationstechnisch umsetzbar, jedoch eignet sich solch eine
 Herangehensweise aus Performance- beziehungsweise Optimierungsgründen nicht
-für jede zu überprüfende, komplexe Zahl $c$, wenn es sich bei der
+für jede zu überprüfende komplexe Zahl $c$, wenn es sich bei der
 Farbzusammenstellung um einen komplexeren Zusammenhang wie in den Elementen
 der Bildergalerie \hyperref[app:6]{A.6} handelt.
 Um dieses Problem zu lösen, erstellt man sogenannte Colormaps
