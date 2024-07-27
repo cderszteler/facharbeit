@@ -1,5 +1,5 @@
 # Facharbeit
-My reasearch paper for school on the mathematical foundations of the Mandelbrot set and its simple visual representation with the help of computer programs.
+My research paper for school on the mathematical foundations of the Mandelbrot set and its simple visual representation with the help of computer programs.
 
 ## Versions
 
